@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+$boxshadow: 0 0 6px #000;
+
+$lightblue:rgb(23, 137, 252);
+$darkblue:rgb(41, 110, 180);
+$strongyellow: rgb(253, 184, 51);
+$beige: rgb(255, 208, 123);
+$brown: rgb(177, 116, 15);
+
+html {
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  scroll-behavior: smooth;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(180deg, rgb(162, 159, 204) 0%, rgba(9,9,125,1) 35%, rgba(0,212,255,1) 100%);
+}
+* {
+  box-sizing: border-box;
+}
