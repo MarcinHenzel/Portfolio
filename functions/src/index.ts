@@ -33,12 +33,12 @@ APP.post('/api/sendMail', (req, res) => {
     sgMail.send(msg)
         .then(() => { 
             console.log('weszoo2');
-            res.status(200).send('weee') 
+            res.status(200).send() 
         }, error => {
             console.log('weszoo3');
 
             console.error(error);
-            res.status(500).send( error)
+            res.status(500).send(error)
             if (error.response) {
                 console.error(error.response.body)
             }
