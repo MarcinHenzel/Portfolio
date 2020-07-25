@@ -1,0 +1,12 @@
+<form class="contact" [formGroup]='sendMailForm'>
+  <label for="name">Name</label>
+  <input formControlName="name" id="name" type="name">
+  <label for="tel">phone</label>
+  <input formControlName="phone" id="phone" type="phone">
+  <label for="mail">Mail</label>
+  <input formControlName="mail" id="mail" type="mail">
+  <label for="mes">Message</label>
+  <textarea id="mes" formControlName="message">
+</textarea>
+  <button (click)="send()">SEND</button>
+</form>
