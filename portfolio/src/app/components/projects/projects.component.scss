@@ -1,0 +1,11 @@
+@import '../../../styles.scss';
+header {
+  @include section-header;
+}
+/* .container {
+  display:flex;
+  justify-content: center;
+} */
+.container {
+  min-height: 30vh;
+}

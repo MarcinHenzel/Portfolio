@@ -5,6 +5,13 @@ $primary: var(--primary);
 $secondary: var(--secondary);
 
 $grey: rgb(80, 80, 80);
+$white: rgb(250,250,250);
+@mixin section-header {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  font-weight: 500;
+}
 
 :root {
 /*   $boxshadow: 0 0 6px #000;
@@ -16,7 +23,7 @@ $grey: rgb(80, 80, 80);
   --background: #ececec;
   --strong-text: rgb(20,20,20);
   --text: #222831;
-  --primary: #f2a365;
+  --primary: #ff9f56;
   --secondary: #30475e;
 }
 html {
@@ -28,7 +35,11 @@ body{
   padding: 0;
   margin: 0;
   background-color: $background;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

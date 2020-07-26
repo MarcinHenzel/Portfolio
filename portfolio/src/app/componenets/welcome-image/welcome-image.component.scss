@@ -1,0 +1,40 @@
+@import '../../../styles.scss';
+
+:host {
+  width: 100vw;
+  height: 700px;
+  background-image: url('./../../../assets/images/home-office.jpg');
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.blur-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.466);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  grid-column: 1/6;
+  min-width: 300px;
+  padding: 1rem;
+}
+header {
+  margin: 1rem 0;
+  font-weight: 500;
+  color: $primary;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+span {
+  letter-spacing: 1px;
+  color: $white;
+}
+.hello {
+  font-size: 2rem;
+}
+.message {
+  font-size: 1.3rem;
+}
+

@@ -14,7 +14,11 @@ import { FooterComponent } from './componenets/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MailSenderComponent } from './components/mail-sender/mail-sender.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { AboutmeComponent } from './componenets/aboutme/aboutme.component';
+import { WelcomeImageComponent } from './componenets/welcome-image/welcome-image.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +30,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     NavbarComponent,
     MailSenderComponent,
     ProjectsComponent,
+    AboutmeComponent,
+    WelcomeImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

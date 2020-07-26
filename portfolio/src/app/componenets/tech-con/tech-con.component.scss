@@ -7,10 +7,7 @@
 }
 
 header {
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 3rem;
-  font-weight: 500;
+  @include section-header;
 }
 
 .tile-cont {
