@@ -1,7 +1,7 @@
 <header>Technologies</header>
 <div class="tile-cont">
   <div *ngFor="let pics of pictures" class="tile">
-    <img class="tech-pics" [alt]="pics.alt" [src]="pics.src"  width="60">
+    <img appLazyLoad class="tech-pics" [alt]="pics.alt" [src]="pics.src"  width="60">
     <span>{{pics.alt}}</span>
   </div>
 

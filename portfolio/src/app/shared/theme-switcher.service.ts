@@ -17,14 +17,17 @@ export class ThemeSwitcherService {
     { name: '--strong-text', value: 'rgb(20,20,20)' },
     { name: '--text', value: '#222831' },
     { name: '--primary', value: '#f2a365' },
-    { name: '--secondary', value: '#30475e' }
+    { name: '--project-bg', value: 'white' },
+    {name: '--navbar-bg', value: 'rgb(255,255,255)'}
   ];
   private darkTheme = [
-    { name: '--background', value: 'rgb(20,20,20)' },
+    { name: '--background', value: 'rgb(30, 30, 30)' },
     { name: '--strong-text', value: '#ececec' },
     { name: '--text', value: 'rgb(184, 184, 184)' },
     { name: '--primary', value: '#30475e' },
-    { name: '--secondary', value: '#f2a365' }
+    { name: '--project-bg', value: 'rgb(20,20,20)' },
+    {name: '--navbar-bg', value: 'rgb(0,0,0, .7)'}
+
   ];
   constructor() { }
   public setLight() {
