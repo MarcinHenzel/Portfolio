@@ -1,6 +1,13 @@
+@import 'src/styles.scss';
+section {
+  height: 80vh;
+}
+header {
+  @include section-header;
+}
 .contact {
-  height: 200px;
-  background-color: white;
+  height: 80vh;
+  background-color: $project-bg;
   display: flex;
   flex-direction: column;
   align-items: center;

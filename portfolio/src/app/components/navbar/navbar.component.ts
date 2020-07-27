@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isDarkMode :boolean;
+  currPosition = 'false';
+  isDarkMode: boolean;
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       console.log(entry.target.id);
+      this.currPosition = entry.target.id;
     })
   })
   constructor(private themeSwitcher: ThemeSwitcherService) { }

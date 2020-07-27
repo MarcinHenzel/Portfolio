@@ -35,6 +35,7 @@ export class DynamicImgsService {
     { alt: 'html', src: 'assets/icons/html.png' },
     { alt: 'css', src: 'assets/icons/css.png' },
     { alt: 'sass', src: 'assets/icons/sass.png' },
+    {alt: 'figma', src: 'assets/icons/figma.png'},
     { alt: 'sql', src: 'assets/icons/sql.png' },
     { alt: 'rxjs', src: 'assets/icons/rxjs.png' },
     { alt: 'ngrx', src: 'assets/icons/ngrx.png' },
@@ -44,7 +45,6 @@ export class DynamicImgsService {
     { alt: 'firebase', src: 'assets/icons/firebase.png' },
     { alt: 'csharp', src: 'assets/icons/csharp.png' },
     { alt: 'arduino', src: 'assets/icons/arduino.png' },
-    {alt: 'figma', src: 'assets/icons/figma.png'}
   ]
   getProjectImgs(title): projectImgs {
     switch (title) {

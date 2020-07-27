@@ -9,32 +9,35 @@ interface CssProperty {
 
 export class ThemeSwitcherService {
   private isDark = false;
-  public get isDarkMode(){
+  public get isDarkMode() {
     return this.isDark;
   }
   private lightTheme = [
     { name: '--background', value: '#ececec' },
     { name: '--strong-text', value: 'rgb(20,20,20)' },
     { name: '--text', value: '#222831' },
-    { name: '--primary', value: '#f2a365' },
+    { name: '--primary', value: 'rgb(40, 59, 182)' },
     { name: '--project-bg', value: 'white' },
-    {name: '--navbar-bg', value: 'rgb(255,255,255, .7)'}
+    { name: '--navbar-bg', value: 'rgb(255,255,255, .7)' },
+    { name: '--welcome-header', value: 'rgb(140, 151, 223)' },
+
   ];
   private darkTheme = [
     { name: '--background', value: 'rgb(30, 30, 30)' },
     { name: '--strong-text', value: '#ececec' },
     { name: '--text', value: 'rgb(184, 184, 184)' },
-    { name: '--primary', value: '#30475e' },
+    { name: '--primary', value: '#ff9f56' },
     { name: '--project-bg', value: 'rgb(20,20,20)' },
-    {name: '--navbar-bg', value: 'rgb(0,0,0, .7)'}
+    { name: '--navbar-bg', value: 'rgb(0,0,0, .7)' },
+    { name: '--welcome-header', value: '#ff9f56' },
 
   ];
   constructor() {
     this.getInitTheme();
-   }
+  }
   public setLight() {
     this.lightTheme.forEach((prop: CssProperty) => {
-    document.documentElement.style.setProperty(prop.name, prop.value);
+      document.documentElement.style.setProperty(prop.name, prop.value);
     });
     this.isDark = false;
     localStorage.setItem('mhTheme', 'light');
@@ -42,11 +45,11 @@ export class ThemeSwitcherService {
   public setDark() {
     this.darkTheme.forEach((prop: CssProperty) => {
       document.documentElement.style.setProperty(prop.name, prop.value);
-      });
+    });
     this.isDark = true;
     localStorage.setItem('mhTheme', 'dark');
   }
-  public getInitTheme(){
+  public getInitTheme() {
     this.isDark = (localStorage.getItem('mhTheme') === 'dark') ? true : false;
     this.isDarkMode ? this.setDark() : this.setLight();
   }

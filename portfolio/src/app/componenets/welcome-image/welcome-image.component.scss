@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.466);
+  background-color: rgba(0, 0, 0, 0.651);
   backdrop-filter: blur(10px);
   height: 100%;
   grid-column: 1/6;
@@ -22,7 +22,7 @@
 header {
   margin: 1rem 0 1.8rem 0;
   font-weight: 500;
-  color: $orange;
+  color: $welcome-header;
   font-size: 3rem;
   letter-spacing: 2px;
   line-height: 3rem;

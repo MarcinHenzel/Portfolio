@@ -44,5 +44,9 @@
 
 .logo {
   font-size: 2rem;
-  color: $orange;
+  color: $primary;
+  font-weight: 500;
+}
+.active {
+  color: $primary;
 }
