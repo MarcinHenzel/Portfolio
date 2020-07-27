@@ -1,32 +1,14 @@
-@import '../../../styles.scss';
+@import 'src/styles.scss';
+
 h1 {
   @include section-header
 }
-h2 {
-  color: $text;
-  letter-spacing: 2px;
-  font-size: 2rem;
-  font-weight: 500;
-  margin: .7rem 0 0 .7rem;
-}
-.container {
-  display:flex;
-  justify-content: space-between;
-  min-height: 30vh;
 
-}
 mat-tab-group {
   width: 50%;
   border-right: 1px solid $primary;
 }
+
 ::ng-deep #Projects mat-ink-bar {
   background-color: $primary;
-}
-section {
-  background: $project-bg;
-  border-radius: 25px;
-  padding: 10px;
-  margin: 3rem 0;
-  max-height: 80vh;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.212);
 }

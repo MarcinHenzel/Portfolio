@@ -18,7 +18,7 @@ export class ThemeSwitcherService {
     { name: '--text', value: '#222831' },
     { name: '--primary', value: '#f2a365' },
     { name: '--project-bg', value: 'white' },
-    {name: '--navbar-bg', value: 'rgb(255,255,255)'}
+    {name: '--navbar-bg', value: 'rgb(255,255,255, .7)'}
   ];
   private darkTheme = [
     { name: '--background', value: 'rgb(30, 30, 30)' },
@@ -29,17 +29,25 @@ export class ThemeSwitcherService {
     {name: '--navbar-bg', value: 'rgb(0,0,0, .7)'}
 
   ];
-  constructor() { }
+  constructor() {
+    this.getInitTheme();
+   }
   public setLight() {
     this.lightTheme.forEach((prop: CssProperty) => {
     document.documentElement.style.setProperty(prop.name, prop.value);
     });
     this.isDark = false;
+    localStorage.setItem('mhTheme', 'light');
   };
   public setDark() {
     this.darkTheme.forEach((prop: CssProperty) => {
       document.documentElement.style.setProperty(prop.name, prop.value);
       });
     this.isDark = true;
+    localStorage.setItem('mhTheme', 'dark');
+  }
+  public getInitTheme(){
+    this.isDark = (localStorage.getItem('mhTheme') === 'dark') ? true : false;
+    this.isDarkMode ? this.setDark() : this.setLight();
   }
 }

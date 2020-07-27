@@ -6,9 +6,11 @@ $secondary: var(--secondary);
 $navbar-bg: var(--navbar-bg);
 $project-bg: var(--project-bg);
 
-$white: rgb(250,250,250);
+$white: rgb(250, 250, 250);
 $orange: #ff9f56;
 $grey: rgb(80, 80, 80);
+
+
 @mixin section-header {
   text-align: center;
   letter-spacing: 2px;
@@ -18,9 +20,10 @@ $grey: rgb(80, 80, 80);
   padding-bottom: 2rem;
   position: relative;
   color: $strong-text;
+
   &:after {
     content: '';
-    position:absolute;
+    position: absolute;
     width: 300vw;
     border-bottom: 1px solid $text;
     height: 0px;
@@ -28,36 +31,40 @@ $grey: rgb(80, 80, 80);
     left: -50vw
   }
 }
+* {
+  box-sizing: border-box;
+}
 
 :root {
-/*   $boxshadow: 0 0 6px #000;
-  $lightblue:rgb(23, 137, 252);
-  $darkblue:rgb(41, 110, 180);
-  $strongyellow: rgb(253, 184, 51);
-  $beige: rgb(255, 208, 123);
-  $brown: rgb(177, 116, 15); */
+
   --navbar-bg: rgb(255, 255, 255, .7);
   --background: #f0f0f0;
-  --strong-text: rgb(20,20,20);
+  --strong-text: rgb(20, 20, 20);
   --text: rgb(31, 31, 31);
   --primary: #ff9f56;
   --project-bg: white;
   --secondary: #30475e;
 }
+
 html {
   font-size: 16px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   scroll-behavior: smooth;
 }
-body{
+
+body {
   padding: 0;
   margin: 0;
   background-color: $background;
   overflow-x: hidden;
 }
-* {
-  box-sizing: border-box;
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media (max-width: 450px) {
+  html {
+    font-size: 12px;
+  }
+}

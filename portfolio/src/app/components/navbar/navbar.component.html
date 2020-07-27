@@ -5,5 +5,5 @@
     <a href="#Technologies" class="tab">Technologies</a>
     <a href="#Contact" class="tab">Contact</a>
   </nav>
-  <mat-slide-toggle (change)="toggle($event)">Slide me!</mat-slide-toggle>
+  <mat-slide-toggle [checked]='isDarkMode'(change)="toggle($event)">Slide me!</mat-slide-toggle>
 </div>

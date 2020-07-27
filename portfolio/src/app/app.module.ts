@@ -19,6 +19,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { AboutmeComponent } from './componenets/aboutme/aboutme.component';
 import { WelcomeImageComponent } from './componenets/welcome-image/welcome-image.component';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { ProjectComponent } from './components/projects/project/project.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,8 @@ import { WelcomeImageComponent } from './componenets/welcome-image/welcome-image
     ProjectsComponent,
     AboutmeComponent,
     WelcomeImageComponent,
+    ImageCarouselComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { WelcomeImageComponent } from './componenets/welcome-image/welcome-image
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

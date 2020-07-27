@@ -1,0 +1,14 @@
+<div class="img-cont">
+  <img [src]="actualImage"  alt="" height="100px" width="700">
+  <div class="btn-container">
+    <a type="button"> Live</a>
+    <a type="button"> Github</a>
+  </div>
+</div>
+<div class="btn-container">
+  <mat-button-toggle-group  (ngModelChange)="manualChange($event)" [ngModel]='counter' >
+    <mat-button-toggle [ngClass]="{'active' : counter == 0}" value="0"></mat-button-toggle>
+    <mat-button-toggle [ngClass]="{'active' : counter == 1}" value="1"></mat-button-toggle>
+    <mat-button-toggle [ngClass]="{'active' : counter == 2}" value="2"></mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

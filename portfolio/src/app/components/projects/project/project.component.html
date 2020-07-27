@@ -1,0 +1,14 @@
+<section>
+  <h2>{{project}}</h2>
+  <div class="container">
+    <mat-tab-group mat-align-tabs="center" color='accent'>
+      <mat-tab label="Description">
+        <ng-content select=".description"></ng-content>
+      </mat-tab>
+      <mat-tab label="Techs & libraries">
+        <ng-content select=".techs"></ng-content>
+      </mat-tab>
+    </mat-tab-group>
+    <app-image-carousel [project]="project"></app-image-carousel>
+  </div>
+</section>
