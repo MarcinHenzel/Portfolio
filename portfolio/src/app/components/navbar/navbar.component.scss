@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
-:host{
-  display:flex;
+:host {
+  display: flex;
   width: 100vw;
   height: 70px;
   box-sizing: border-box;
@@ -9,7 +9,7 @@
   justify-content: space-around;
   align-items: center;
   z-index: 999;
-/*   height: 70px;
+  /*   height: 70px;
   overflow: hidden;
   background-color: #222;
   display: flex;
@@ -19,9 +19,11 @@
   background-color: $navbar-bg;
 
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 3px rgba(0,0,0, .15);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
 }
-.container, nav {
+
+.container,
+nav {
   display: flex;
   align-items: center;
 }
@@ -47,6 +49,37 @@
   color: $primary;
   font-weight: 500;
 }
+
 .active {
   color: $primary;
+}
+
+:host ::ng-deep{
+.bigToggle .mat-slide-toggle-bar {
+    height: 30px;
+    width: 70px;
+    border-radius: 40px;
+  }
+  .moon .mat-slide-toggle-thumb {
+    background-image: url('/assets/icons/moon.png');
+  }
+  .sun .mat-slide-toggle-thumb {
+    background-image: url('/assets/icons/sun.png');
+  }
+.mat-slide-toggle-thumb {
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.bigToggle.mat-checked .mat-slide-toggle-thumb-container {
+    transform: translate3d(-40px, 0, 0)
+  }
+
+.bigToggle .mat-slide-toggle-thumb-container {
+    width: 50px;
+    height: 50px;
+    top: -5px;
+    left: 35px
+  }
 }

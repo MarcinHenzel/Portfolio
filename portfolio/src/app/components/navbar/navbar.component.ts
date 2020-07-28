@@ -11,10 +11,15 @@ export class NavbarComponent implements OnInit {
   isDarkMode: boolean;
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      console.log(entry.target.id);
-      this.currPosition = entry.target.id;
+      const hash = '#' + entry.target.id;
+      const navEl = document.querySelector(`a[href="${hash}"]`);
+      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+          navEl.classList.add('active');
+      } else {
+          navEl.classList.remove('active');
+      }
     })
-  })
+  }, {threshold: 0.5})
   constructor(private themeSwitcher: ThemeSwitcherService) { }
 
   ngOnInit(): void {
@@ -24,6 +29,8 @@ export class NavbarComponent implements OnInit {
     })
   }
   toggle(event) {
+    console.log(this.isDarkMode);;
+    this.isDarkMode = !this.isDarkMode;
     event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
   }
 

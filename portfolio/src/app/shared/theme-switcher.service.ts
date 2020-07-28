@@ -16,10 +16,9 @@ export class ThemeSwitcherService {
     { name: '--background', value: '#ececec' },
     { name: '--strong-text', value: 'rgb(20,20,20)' },
     { name: '--text', value: '#222831' },
-    { name: '--primary', value: 'rgb(40, 59, 182)' },
+    { name: '--primary', value: '#F64E4D' },
     { name: '--project-bg', value: 'white' },
     { name: '--navbar-bg', value: 'rgb(255,255,255, .7)' },
-    { name: '--welcome-header', value: 'rgb(140, 151, 223)' },
 
   ];
   private darkTheme = [
@@ -29,7 +28,6 @@ export class ThemeSwitcherService {
     { name: '--primary', value: '#ff9f56' },
     { name: '--project-bg', value: 'rgb(20,20,20)' },
     { name: '--navbar-bg', value: 'rgb(0,0,0, .7)' },
-    { name: '--welcome-header', value: '#ff9f56' },
 
   ];
   constructor() {

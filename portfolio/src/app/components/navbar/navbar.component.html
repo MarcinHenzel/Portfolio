@@ -5,5 +5,5 @@
     <a [ngClass]="{'active': currPosition === 'Technologies'}" href="#Technologies" class="tab">Technologies</a>
     <a [ngClass]="{'active': currPosition === 'Contact'}" href="#Contact" class="tab">Contact</a>
   </nav>
-  <mat-slide-toggle [checked]='isDarkMode'(change)="toggle($event)">Slide me!</mat-slide-toggle>
+  <mat-slide-toggle class="bigToggle" [ngClass]="{'sun': !isDarkMode, 'moon': isDarkMode}"  [checked]='isDarkMode'(change)="toggle($event)"></mat-slide-toggle>
 </div>

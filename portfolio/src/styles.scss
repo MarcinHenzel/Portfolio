@@ -4,7 +4,6 @@ $strong-text: var(--strong-text);
 $primary: var(--primary);
 $navbar-bg: var(--navbar-bg);
 $project-bg: var(--project-bg);
-$welcome-header: var(--welcome-header);
 $white: rgb(235, 235, 235);
 /* $orange: #ff9f56; */
 /* $orange: rgb(40, 59, 182); */
@@ -37,12 +36,12 @@ $grey: rgb(80, 80, 80);
 
 :root {
   //colors are applied from theme-switcher.service
-  --welcome-header: rgb(140, 151, 223);
   --navbar-bg: rgb(255, 255, 255, .7);
   --background: #f0f0f0;
   --strong-text: rgb(20, 20, 20);
   --text: rgb(31, 31, 31);
-  --primary: rgb(40, 59, 182);
+/*   --primary: rgb(40, 59, 182); */
+  --primary: #F64E4D;
   --project-bg: white;
 }
 
