@@ -1,8 +1,14 @@
 @import 'src/styles.scss';
 
-:host {
-  display: block;
-  height: 80vh;
+
+section {
+  display: flex;
+  height: 100%;
+  background: $project-bg;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 3rem 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.212);  height: 80vh;
 }
 h2 {
   color: $text;
@@ -11,20 +17,20 @@ h2 {
   font-weight: 500;
   margin: .7rem 0 0 .7rem;
 }
-.container {
+.container, .img-cont {
   display:flex;
-  justify-content: space-between;
-  height: 100%;
-
+  flex-direction: column;
+  width: 50%;
 }
-section {
-  height: 100%;
-  background: $project-bg;
-  border-radius: 25px;
-  padding: 10px;
-  margin: 3rem 0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.212);
+.right-border {
+  border-right: 1px solid $primary;
 }
 :host ::ng-deep .mat-tab-label-content {
   color: $text;
 }
+@media (max-width: 700px) {
+  .right-border {
+    border-right: none;;
+  }
+}
+

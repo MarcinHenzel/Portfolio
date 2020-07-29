@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import { DynamicImgsService } from 'src/app/shared/services/dynamic-imgs.service';
-import { projectImgs } from 'src/app/shared/models/projectImgs';
+import { projectCaruData } from './../../shared/models/projectImgs';
+import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { imgObj } from 'src/app/shared/models/imgObj';
 
 @Component({
   selector: 'app-image-carousel',
@@ -8,16 +8,15 @@ import { projectImgs } from 'src/app/shared/models/projectImgs';
   styleUrls: ['./image-carousel.component.scss']
 })
 export class ImageCarouselComponent implements OnInit {
-  qqq;
-  @Input() project = 'ITFS';
-  actualImage = '/assets/images/rwdPhones.png';
+  @Input() project: projectCaruData;
+  @ViewChild('img') imgRef: ElementRef;
+  actualImage ;
   counter = 0;
   intervalRef;
-  images: projectImgs;
-  constructor( private dynamicImgs: DynamicImgsService) { }
+  constructor( private rend: Renderer2) { }
 
   ngOnInit(): void {
-    this.images = this.dynamicImgs.getProjectImgs(this.project);
+    this.actualImage = this.project.images[0].src;
     this.intervalRef = setInterval(this.interval, 3000);
   }
 
@@ -30,11 +29,12 @@ export class ImageCarouselComponent implements OnInit {
     this.changeImage(this.counter);
   }
   changeImage(index) {
-    this.actualImage = this.images.images[index].src;
-    clearInterval(this.intervalRef);
-    this.intervalRef = setInterval(this.interval, 3000);
-  }
-  dsa(e) {
-    console.log(e);
+    this.rend.setStyle(this.imgRef.nativeElement, 'opacity', '0');
+    setTimeout(() => {
+      this.actualImage =  this.project.images[index].src;
+      clearInterval(this.intervalRef);
+      this.intervalRef = setInterval(this.interval, 3000);
+      this.rend.setStyle(this.imgRef.nativeElement, 'opacity', '1');
+    }, 250);
   }
 }

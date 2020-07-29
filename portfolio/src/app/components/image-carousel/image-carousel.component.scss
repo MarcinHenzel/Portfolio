@@ -1,31 +1,70 @@
 @import 'src/styles.scss';
+
 :host {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-
+  height: 100%;
+  padding: 2%;
 }
+
 .img-cont {
+  height: 80%;
+  width: 100%;
+  flex-grow: 2;
+  margin-bottom: 3%;
+  border: 1px solid black;
+}
+.img-carousel {
+  height: 100%;
+  width: 100%;
+  transition: opacity .5s;
+}
+.btn-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+.redirect-btn-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.redirect-btn {
+  display: flex;
+  width:400px;
+/*   border: 1px solid $primary;
+  border-radius: 5px;
+  width: 2em;
+  height: 1em;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $primary;
+  margin: 5px; */
+}
+
+:host mat-button-toggle-group {
+  border: none;
+  height: 2rem;
 
 }
-.btn-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+:host ::ng-deep .mat-button-toggle-group-appearance-standard {
+
+}
+:host ::ng-deep mat-button-toggle {
+  border: 1px solid $strong-text !important;
+
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  background-color: $project-bg;
 }
 .active {
   background-color: $text;
   transition: background-color 1s;
-}
-:host mat-button-toggle-group {
-  border: none;
-}
-:host ::ng-deep mat-button-toggle {
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  margin: 5px;
-  border: 1px solid $text;
-  background-color: $project-bg;
+  box-shadow:inset 0px 0px 0px 2px $background;
 }

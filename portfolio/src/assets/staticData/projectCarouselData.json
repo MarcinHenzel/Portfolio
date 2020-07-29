@@ -1,0 +1,22 @@
+[{
+    "title": "ITFS", "redirectLive": "https://itfs-cfcd9.firebaseapp.com", "redirectGit": "https://github.com/MarcinHenzel/ITFS"
+    , "images": [
+    { "alt": "Rwd", "src": "assets/images/rwdPhones.png"
+    },
+    { "alt": "Search deleg", "src": "assets/screenshots/search-deleg.png"
+    },
+    { "alt": "Home", "src": "assets/screenshots/home.png"
+    }
+  ]
+},
+{
+    "title": "Tribal Manager", "redirectLive": "https://tribalmanager-f84a4.web.app", "redirectGit": "https://github.com/MarcinHenzel/Tribal-Manager-Angular"
+    , "images": [
+    { "alt": "Assign orders", "src": "assets/screenshots/assignOrders.png"
+    },
+    { "alt": "Best plan", "src": "assets/screenshots/bestAttackPlan.png"
+    },
+    { "alt": "Repetition counter", "src": "assets/screenshots/repetitionCounter.png"
+    }
+  ]
+}]

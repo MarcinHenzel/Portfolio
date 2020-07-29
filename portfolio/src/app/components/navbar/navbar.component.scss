@@ -22,64 +22,83 @@
   box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
 }
 
+.logo {
+  font-size: 2rem;
+  color: $primary;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 .container,
 nav {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  justify-content: space-between;
+  min-width: 300px;
+  width: 35%;
+  margin-right: 30px;
 }
 
 .tab {
   cursor: pointer;
-  font-size: 25px;
+  font-size: 1.5rem;
   display: block;
   text-align: center;
-  padding: 20px .7rem;
+  padding: 20px .5rem;
   text-decoration: none;
   color: $text;
   font-weight: 500;
 }
 
-.tab a:hover {
-  background-color: rgb(26, 26, 26);
-  color: red;
-}
-
-.logo {
-  font-size: 2rem;
-  color: $primary;
-  font-weight: 500;
-}
 
 .active {
   color: $primary;
 }
 
-:host ::ng-deep{
-.bigToggle .mat-slide-toggle-bar {
+:host ::ng-deep {
+  mat-slide-toggle {}
+
+  .bigToggle .mat-slide-toggle-bar {
     height: 30px;
     width: 70px;
     border-radius: 40px;
+    background-color: $text;
   }
+
   .moon .mat-slide-toggle-thumb {
     background-image: url('/assets/icons/moon.png');
   }
+
   .sun .mat-slide-toggle-thumb {
     background-image: url('/assets/icons/sun.png');
   }
-.mat-slide-toggle-thumb {
+
+  .mat-slide-toggle-thumb {
     height: 40px;
     width: 40px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: $primary !important;
   }
-.bigToggle.mat-checked .mat-slide-toggle-thumb-container {
+
+  .bigToggle.mat-checked .mat-slide-toggle-thumb-container {
     transform: translate3d(-40px, 0, 0)
   }
 
-.bigToggle .mat-slide-toggle-thumb-container {
+  .bigToggle .mat-slide-toggle-thumb-container {
     width: 50px;
     height: 50px;
     top: -5px;
     left: 35px
+  }
+}
+
+@media (max-width: 545px) {
+  .logo {
+    display: none;
   }
 }

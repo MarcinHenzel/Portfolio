@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 interface CssProperty {
   readonly name: string;
   readonly value: string;
@@ -8,10 +9,8 @@ interface CssProperty {
 })
 
 export class ThemeSwitcherService {
-  private isDark = false;
-  public get isDarkMode() {
-    return this.isDark;
-  }
+   isDark = new BehaviorSubject((localStorage.getItem('mhTheme') === 'dark') ? true : false);
+
   private lightTheme = [
     { name: '--background', value: '#ececec' },
     { name: '--strong-text', value: 'rgb(20,20,20)' },
@@ -31,24 +30,22 @@ export class ThemeSwitcherService {
 
   ];
   constructor() {
-    this.getInitTheme();
+    this.isDark.value ? this.setDark() : this.setLight();
   }
   public setLight() {
     this.lightTheme.forEach((prop: CssProperty) => {
       document.documentElement.style.setProperty(prop.name, prop.value);
     });
-    this.isDark = false;
+    this.isDark.next(false);
     localStorage.setItem('mhTheme', 'light');
   };
   public setDark() {
     this.darkTheme.forEach((prop: CssProperty) => {
       document.documentElement.style.setProperty(prop.name, prop.value);
     });
-    this.isDark = true;
+    this.isDark.next(true);
+
     localStorage.setItem('mhTheme', 'dark');
   }
-  public getInitTheme() {
-    this.isDark = (localStorage.getItem('mhTheme') === 'dark') ? true : false;
-    this.isDarkMode ? this.setDark() : this.setLight();
-  }
+
 }

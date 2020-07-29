@@ -9,30 +9,29 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   currPosition = 'false';
   isDarkMode: boolean;
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const hash = '#' + entry.target.id;
-      const navEl = document.querySelector(`a[href="${hash}"]`);
-      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-          navEl.classList.add('active');
-      } else {
-          navEl.classList.remove('active');
-      }
-    })
-  }, {threshold: 0.5})
-  constructor(private themeSwitcher: ThemeSwitcherService) { }
 
-  ngOnInit(): void {
-    this.isDarkMode = this.themeSwitcher.isDarkMode;
-    document.querySelectorAll('.inter-obser-tag').forEach(section => {
-      this.observer.observe(section);
-    })
-  }
-  toggle(event) {
-    console.log(this.isDarkMode);;
-    this.isDarkMode = !this.isDarkMode;
-    event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
-  }
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const hash = '#' + entry.target.id;
+    const navEl = document.querySelector(`a[href="${hash}"]`);
+    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+      navEl.classList.add('active');
+    } else {
+      navEl.classList.remove('active');
+    }
+  })
+}, { threshold: 0.5 });
+constructor(private themeSwitcher: ThemeSwitcherService) { }
+
+ngOnInit(): void {
+  this.themeSwitcher.isDark.subscribe(val => this.isDarkMode = val);
+  document.querySelectorAll('.inter-obser-tag').forEach(section => {
+    this.observer.observe(section);
+  })
+}
+toggle(event) {
+  event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
+}
 
 }
 /* <main>

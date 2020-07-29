@@ -2,7 +2,7 @@
 <div class="container">
   <nav>
     <a [ngClass]="{'active': currPosition === 'Projects'}" href="#Projects" class="tab">Projects</a>
-    <a [ngClass]="{'active': currPosition === 'Technologies'}" href="#Technologies" class="tab">Technologies</a>
+    <a [ngClass]="{'active': currPosition === 'Technologies'}" href="#Skills" class="tab">Skills</a>
     <a [ngClass]="{'active': currPosition === 'Contact'}" href="#Contact" class="tab">Contact</a>
   </nav>
   <mat-slide-toggle class="bigToggle" [ngClass]="{'sun': !isDarkMode, 'moon': isDarkMode}"  [checked]='isDarkMode'(change)="toggle($event)"></mat-slide-toggle>

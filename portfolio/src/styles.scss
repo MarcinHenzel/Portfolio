@@ -7,9 +7,13 @@ $project-bg: var(--project-bg);
 $white: rgb(235, 235, 235);
 /* $orange: #ff9f56; */
 /* $orange: rgb(40, 59, 182); */
-$grey: rgb(80, 80, 80);
+$grey: rgb(124, 124, 124);
 
-
+@mixin flex-center-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @mixin section-header {
   text-align: center;
   letter-spacing: 2px;
