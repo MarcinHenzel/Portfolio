@@ -1,12 +1,17 @@
 <section>
   <div class="container right-border">
     <h2>{{project.title}}</h2>
-    <mat-tab-group mat-align-tabs="center" color='accent'>
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
       <mat-tab label="Description">
-        <ng-content select=".description"></ng-content>
+      <span class="description">{{project.description}}</span>
+      <div class="img-cont">
+      </div>
+
       </mat-tab>
       <mat-tab label="Techs & libraries">
-        <ng-content select=".techs"></ng-content>
+          <ul>
+            <li class="techs" *ngFor="let tech of project.techs"><span>{{tech}}</span></li>
+          </ul>
       </mat-tab>
     </mat-tab-group>
   </div>

@@ -1,42 +1,32 @@
 <h1>Projects</h1>
-<app-project [project]='itfs'>
-<span class="description">dsadas</span>
+<app-project *ngFor='let project of projects' [project]="project"></app-project>
+<!-- <app-project [project]='itfs'>
+<span class="description">
+
+
+</span>
 <ul class="techs">
 
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Angular9</li>
+  <li>Angular Materials</li>
+  <li>REST</li>
+  <li>RXJS</li>
+  <li>RWD</li>
+  <li>SASS</li>
+  <li>Firebase Functions</li>
+  <li>Firebase Hosting</li>
 </ul>
 </app-project >
 <app-project [project]='tribalManager'>
-  <span class="description">dsadas</span>
+  <span class="description">
+
+  </span>
   <ul class="techs">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Angular 8</li>
+    <li>Angular Materials</li>
+    <li>MomentJS</li>
+    <li>Firebase Hosting</li>
+    <li>SASS</li>
   </ul>
 </app-project >
-<!-- <app-project project='This Page'>
-  <span class="description">dsadas</span>
-  <ul class="techs">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-</app-project>
  -->

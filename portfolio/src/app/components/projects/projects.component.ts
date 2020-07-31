@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import caruData from 'src/assets/staticData/projectCarouselData.json';
+import projects from 'src/assets/staticData/projects.json';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -7,9 +7,9 @@ import caruData from 'src/assets/staticData/projectCarouselData.json';
 })
 export class ProjectsComponent implements OnInit {
   constructor() { }
-  itfs = caruData[0];
-  tribalManager = caruData[1];
+  projects = projects;
   ngOnInit(): void {
+    console.log(this.projects);
   }
 
 }

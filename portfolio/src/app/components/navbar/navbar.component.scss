@@ -4,20 +4,11 @@
   display: flex;
   width: 100vw;
   height: 70px;
-  box-sizing: border-box;
   position: fixed;
   justify-content: space-around;
   align-items: center;
   z-index: 999;
-  /*   height: 70px;
-  overflow: hidden;
-  background-color: #222;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  padding: 0px .7rem; */
   background-color: $navbar-bg;
-
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
 }
@@ -27,6 +18,10 @@
   color: $primary;
   font-weight: 500;
   letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+
 }
 
 .container,
@@ -52,17 +47,12 @@ nav {
   text-decoration: none;
   color: $text;
   font-weight: 500;
-}
-
-
-.active {
-  color: $primary;
+  user-select: none;
 }
 
 :host ::ng-deep {
-  mat-slide-toggle {}
-
   .bigToggle .mat-slide-toggle-bar {
+    user-select: none;
     height: 30px;
     width: 70px;
     border-radius: 40px;
@@ -88,7 +78,6 @@ nav {
   .bigToggle.mat-checked .mat-slide-toggle-thumb-container {
     transform: translate3d(-40px, 0, 0)
   }
-
   .bigToggle .mat-slide-toggle-thumb-container {
     width: 50px;
     height: 50px;
@@ -96,7 +85,9 @@ nav {
     left: 35px
   }
 }
-
+.active {
+  color: $primary;
+}
 @media (max-width: 545px) {
   .logo {
     display: none;

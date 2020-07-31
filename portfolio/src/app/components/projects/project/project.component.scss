@@ -1,6 +1,5 @@
 @import 'src/styles.scss';
 
-
 section {
   display: flex;
   height: 100%;
@@ -8,8 +7,10 @@ section {
   border-radius: 25px;
   padding: 10px;
   margin: 3rem 0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.212);  height: 80vh;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.212);
+  height: 80vh;
 }
+
 h2 {
   color: $text;
   letter-spacing: 2px;
@@ -17,20 +18,47 @@ h2 {
   font-weight: 500;
   margin: .7rem 0 0 .7rem;
 }
-.container, .img-cont {
-  display:flex;
+
+.container,
+.img-cont {
+  display: flex;
   flex-direction: column;
   width: 50%;
 }
+
 .right-border {
   border-right: 1px solid $primary;
 }
+
 :host ::ng-deep .mat-tab-label-content {
+  color: $text;
+}
+
+
+/* mat-tab-group {
+  width: 50%;
+  border-right: 1px solid $primary;
+} */
+
+::ng-deep #Projects mat-ink-bar {
+  background-color: $primary;
+}
+.techs {
+  color: $text;
+  list-style: none;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2.5rem;
+}
+.description {
   color: $text;
 }
 @media (max-width: 700px) {
   .right-border {
-    border-right: none;;
+    border-right: none;
   }
 }
-

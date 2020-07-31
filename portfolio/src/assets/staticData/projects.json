@@ -1,0 +1,58 @@
+[
+  {
+    "title": "ITFS",
+    "redirectLive": "https://itfs-cfcd9.firebaseapp.com",
+    "redirectGit": "https://github.com/MarcinHenzel/ITFS",
+    "description": "Project presents my frontend contribution which was used in group Engineering Thesis. Backend via Firebase functions was added to present working REST. Application is ment to be used by administrators to track and add data to sections like transport or office with the possibility of sending alerts to mailboxes.",
+    "techs": [
+      "Angular9",
+      "Angular Materials",
+      "REST",
+      "RXJS",
+      "RWD",
+      "SASS",
+      "Firebase Functions",
+      "Firebase Hosting"
+    ],
+    "images": [
+      {
+        "alt": "Rwd",
+        "src": "assets/images/rwdPhones.png"
+      },
+      {
+        "alt": "Search deleg",
+        "src": "assets/screenshots/search-deleg.png"
+      },
+      {
+        "alt": "Home",
+        "src": "assets/screenshots/home.png"
+      }
+    ]
+  },
+  {
+    "title": "Tribal Manager",
+    "redirectLive": "https://tribalmanager-f84a4.web.app",
+    "redirectGit": "https://github.com/MarcinHenzel/Tribal-Manager-Angular",
+    "description": "Application helps to manage with huge data in strategic game called \"Plemiona\". Consists of the following modules: Best attack plan - Tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid sleep hours as much as possible. Assign orders - Tools for leaders to transcribe orders based on resources and planned targets. Nobles in range - Calculates conquer potential of players in certain area Repetition counter - Counts all repeating sources from multiple SOS raports. To import data select all .txt files at once. Because calculators are ment to copy data from programs like Excel. You can find test data to copy in /src/assets.",
+    "techs": [
+      "Angular 8",
+      "Angular Materials",
+      "MomentJS",
+      "Firebase Hosting",
+      "SASS"
+    ], "images": [
+      {
+        "alt": "Assign orders",
+        "src": "assets/screenshots/assignOrders.png"
+      },
+      {
+        "alt": "Best plan",
+        "src": "assets/screenshots/bestAttackPlan.png"
+      },
+      {
+        "alt": "Repetition counter",
+        "src": "assets/screenshots/repetitionCounter.png"
+      }
+    ]
+  }
+]

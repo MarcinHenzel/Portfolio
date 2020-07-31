@@ -1,6 +1,7 @@
 @import 'src/styles.scss';
 section {
   height: 80vh;
+  width: 100vw;
 }
 header {
   @include section-header;
