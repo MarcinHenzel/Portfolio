@@ -1,14 +1,12 @@
-<div class="img-cont">
   <img #img [src]="actualImage" class="img-carousel">
-</div>
-<div class="btn-cont">
-  <mat-button-toggle-group (ngModelChange)="manualChange($event)" [ngModel]='counter'>
-    <mat-button-toggle [ngClass]="{'active' : counter == 0}" value="0"></mat-button-toggle>
-    <mat-button-toggle [ngClass]="{'active' : counter == 1}" value="1"></mat-button-toggle>
-    <mat-button-toggle [ngClass]="{'active' : counter == 2}" value="2"></mat-button-toggle>
-  </mat-button-toggle-group>
-  <div class="redirect-btn-cont">
-    <a type="button" [href]="project.redirectLive" class="redirect-btn"> Live</a>
-    <a type="button" [href]="project.redirectGit" class="redirect-btn"> Github</a>
+  <div class="btn-cont">
+    <mat-button-toggle-group (ngModelChange)="manualChange($event)" [ngModel]='counter'>
+      <mat-button-toggle [ngClass]="{'active' : counter == 0}" value="0"></mat-button-toggle>
+      <mat-button-toggle [ngClass]="{'active' : counter == 1}" value="1"></mat-button-toggle>
+      <mat-button-toggle [ngClass]="{'active' : counter == 2}" value="2"></mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="redirect-btn-cont">
+      <a [href]="project.redirectLive" class="redirect-btn"> Live</a>
+      <a [href]="project.redirectGit" class="redirect-btn"> Github</a>
+    </div>
   </div>
-</div>

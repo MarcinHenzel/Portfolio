@@ -3,7 +3,17 @@
     "title": "ITFS",
     "redirectLive": "https://itfs-cfcd9.firebaseapp.com",
     "redirectGit": "https://github.com/MarcinHenzel/ITFS",
-    "description": "Project presents my frontend contribution which was used in group Engineering Thesis. Backend via Firebase functions was added to present working REST. Application is ment to be used by administrators to track and add data to sections like transport or office with the possibility of sending alerts to mailboxes.",
+    "description": [
+      {
+        "sentence": "Project presents my frontend contribution which was used in group Engineering Thesis."
+      },
+      {
+        "sentence": "Backend via Firebase functions was added to present working REST."
+      },
+      {
+        "sentence": "Application is ment to be used by administrators to track and add data to sections like transport or office with the possibility of sending alerts to mailboxes."
+      }
+    ],
     "techs": [
       "Angular9",
       "Angular Materials",
@@ -17,15 +27,15 @@
     "images": [
       {
         "alt": "Rwd",
-        "src": "assets/images/rwdPhones.png"
+        "src": "assets/screenshots/rwdPhones.png"
       },
       {
         "alt": "Search deleg",
-        "src": "assets/screenshots/search-deleg.png"
+        "src": "assets/screenshots/alarm&mileage.png"
       },
       {
         "alt": "Home",
-        "src": "assets/screenshots/home.png"
+        "src": "assets/screenshots/home&delegation.png"
       }
     ]
   },
@@ -33,25 +43,50 @@
     "title": "Tribal Manager",
     "redirectLive": "https://tribalmanager-f84a4.web.app",
     "redirectGit": "https://github.com/MarcinHenzel/Tribal-Manager-Angular",
-    "description": "Application helps to manage with huge data in strategic game called \"Plemiona\". Consists of the following modules: Best attack plan - Tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid sleep hours as much as possible. Assign orders - Tools for leaders to transcribe orders based on resources and planned targets. Nobles in range - Calculates conquer potential of players in certain area Repetition counter - Counts all repeating sources from multiple SOS raports. To import data select all .txt files at once. Because calculators are ment to copy data from programs like Excel. You can find test data to copy in /src/assets.",
+    "description": [
+      {
+        "sentence": "Application helps to manage with huge data in strategic game called \"Plemiona\"."
+      },
+      {
+        "sentence": "tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid inserted sleep hours.",
+        "preBold": "Best attack plan - "
+      },
+      {
+        "sentence": "tools for leaders to transcribe orders based on resources and planned targets.",
+        "preBold": "Assign orders  - "
+      },
+      {
+        "sentence": "calculates conquer potential of players in certain area.",
+        "preBold": "Nobles in range  - "
+      },
+      {
+        "sentence": "counts all repeating sources from multiple SOS raports. To import data select all .txt files at once.",
+        "preBold": "Repetition counter  - "
+      },
+      {
+        "sentence": "Because calculators are ment to copy data from programs like Excel. You can find test data to copy in /src/assets."
+      }
+    ],
     "techs": [
       "Angular 8",
       "Angular Materials",
+      "Web Worker",
       "MomentJS",
       "Firebase Hosting",
       "SASS"
-    ], "images": [
+    ],
+    "images": [
       {
         "alt": "Assign orders",
-        "src": "assets/screenshots/assignOrders.png"
+        "src": "assets/screenshots/counter&Orders.png"
       },
       {
         "alt": "Best plan",
-        "src": "assets/screenshots/bestAttackPlan.png"
+        "src": "assets/images/ti&tw.png"
       },
       {
         "alt": "Repetition counter",
-        "src": "assets/screenshots/repetitionCounter.png"
+        "src": "assets/screenshots/bestAttackPlanAndNobles.png"
       }
     ]
   }

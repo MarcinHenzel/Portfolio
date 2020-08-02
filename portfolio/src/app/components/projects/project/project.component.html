@@ -3,15 +3,15 @@
     <h2>{{project.title}}</h2>
     <mat-tab-group mat-align-tabs="center" dynamicHeight>
       <mat-tab label="Description">
-      <span class="description">{{project.description}}</span>
-      <div class="img-cont">
-      </div>
-
+        <p class="description-sentence" *ngFor="let sentence of project.description"><span class="bold">{{sentence?.preBold}}</span>{{sentence.sentence}}
+        </p>
+        <div class="img-cont">
+        </div>
       </mat-tab>
       <mat-tab label="Techs & libraries">
-          <ul>
-            <li class="techs" *ngFor="let tech of project.techs"><span>{{tech}}</span></li>
-          </ul>
+        <ul class="tech-cont">
+          <li class="techs" *ngFor="let tech of project.techs"><span>{{tech}}</span></li>
+        </ul>
       </mat-tab>
     </mat-tab-group>
   </div>

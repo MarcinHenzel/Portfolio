@@ -1,15 +1,17 @@
 @import 'src/styles.scss';
-:host {
+
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
 }
-
 header {
   @include section-header;
 }
-
+.layout {
+  @include narrow-layout;
+}
 .tile-cont {
   display: flex;
   flex-wrap: wrap;

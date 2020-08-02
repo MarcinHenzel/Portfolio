@@ -1,8 +1,11 @@
-<header>Skills</header>
-<div class="tile-cont">
-  <div *ngFor="let pics of pictures" class="tile">
-    <img appLazyLoad class="tech-pics" [alt]="pics.alt" [src]="pics.src"  width="60">
-    <span>{{pics.alt}}</span>
+<section>
+  <header>Skills</header>
+<div class="layout">
+  <div class="tile-cont">
+    <div *ngFor="let pics of pictures" class="tile">
+      <img appLazyLoad class="tech-pics" [alt]="pics.alt" [src]="pics.src"  width="60">
+      <span>{{pics.alt}}</span>
+    </div>
   </div>
-
 </div>
+</section>

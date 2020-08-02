@@ -1,4 +1,10 @@
 @import 'src/styles.scss';
+:host {
+  width: 100vw;
+}
+.layout {
+  @include narrow-layout;
+}
 h1 {
   @include section-header
 }

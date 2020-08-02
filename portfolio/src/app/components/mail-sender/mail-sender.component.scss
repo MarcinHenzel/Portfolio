@@ -1,13 +1,15 @@
 @import 'src/styles.scss';
 section {
-  height: 80vh;
   width: 100vw;
 }
 header {
   @include section-header;
 }
+.layout {
+  @include narrow-layout;
+}
 .contact {
-  height: 80vh;
+  width: 100%;
   background-color: $project-bg;
   display: flex;
   flex-direction: column;
