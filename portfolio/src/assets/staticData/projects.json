@@ -21,6 +21,7 @@
       "RXJS",
       "RWD",
       "SASS",
+      "Font Awesome",
       "Firebase Functions",
       "Firebase Hosting"
     ],
@@ -64,7 +65,7 @@
         "preBold": "Repetition counter  - "
       },
       {
-        "sentence": "Because calculators are ment to copy data from programs like Excel. You can find test data to copy in /src/assets."
+        "sentence": "Due to requiment of having specific data to make the calculations. You can find some examples that might be copied in /src/assets."
       }
     ],
     "techs": [

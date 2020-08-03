@@ -1,17 +1,97 @@
 @import 'src/styles.scss';
+
 section {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
+
 header {
   @include section-header;
 }
+
 .layout {
   @include narrow-layout;
+  background-color: $background;
 }
+
 .contact {
-  width: 100%;
-  background-color: $project-bg;
+  align-self: center;
+  box-sizing: border-box;
   display: flex;
+  width: 100%;
+  max-width: 1200px;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+}
+
+.flex-layout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-cont {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  margin: .5rem 0;
+}
+input,
+textarea,
+.send-btn {
+  background-color: $project-bg;
+  border: 1px solid $primary;
+  border-radius: 8px;
+  color: $text;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  outline: none;
+  padding: .5rem;
+  @include bot-right-shadow;
+}
+
+label {
+  color: $text;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  margin-bottom: .1rem;
+}
+
+.textarea-cont {
+  width: 100%;
+  margin: .5rem 0;
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+  min-height: 200px;
+}
+
+@media (max-width: 500px) {
+  .flex-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-cont {
+    width: 100%;
+  }
+}
+.send-btn {
+  cursor: pointer;
+  color: $strong-text;
+  transition: color .3s;
+  width: 150px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  &:hover {
+    color: $primary;
+  }
+}
+.req-sign {
+  color: $primary;
 }

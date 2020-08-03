@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SendGridService } from 'src/app/shared/services/send-grid.service';
 import { ThemeSwitcherService } from 'src/app/shared/theme-switcher.service';
 
@@ -10,18 +10,14 @@ import { ThemeSwitcherService } from 'src/app/shared/theme-switcher.service';
 })
 export class MailSenderComponent implements OnInit {
 
-  constructor(private sendGrid: SendGridService, private fb: FormBuilder, private themSwitcher: ThemeSwitcherService) { }
+  constructor(private sendGrid: SendGridService, private fb: FormBuilder) { }
   sendMailForm: FormGroup = this.fb.group({
-    phone: '',
-    name: '',
-    message: '',
-    mail: ''
+    phone: [''],
+    name: ['', Validators.required],
+    message: ['', Validators.required],
+    mail: ['', Validators.email],
   })
   ngOnInit(): void {
-  }
-
-  changeTheme(primary: string) {
-    document.documentElement.style.setProperty('--main-bg', primary);
   }
   send() {
     const body = {phone: this.sendMailForm.get('phone').value,

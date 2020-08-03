@@ -1,17 +1,25 @@
 <section>
   <header>Contact Me</header>
-  <div class="layout">
-    <form class="contact" [formGroup]='sendMailForm'>
-      <label for="name">Name</label>
-      <input formControlName="name" id="name" type="name">
-      <label for="tel">phone</label>
-      <input formControlName="phone" id="phone" type="phone">
-      <label for="mail">Mail</label>
-      <input formControlName="mail" id="mail" type="mail">
-      <label for="mes">Message</label>
-      <textarea id="mes" formControlName="message">
-    </textarea>
-      <button (click)="send()">SEND</button>
-    </form>
-  </div>
+  <form class="contact" [formGroup]='sendMailForm'>
+    <div class="flex-layout">
+      <div class="input-cont">
+        <label for="name">Name<span class="req-sign">*</span></label>
+        <input formControlName="name" id="name" type="name">
+      </div>
+      <div class="input-cont">
+        <label for="tel">Phone</label>
+        <input formControlName="phone" id="phone" type="phone">
+      </div>
+      <div class="input-cont">
+        <label for="mail">Mail<span class="req-sign">*</span></label>
+        <input formControlName="mail" id="mail" type="mail">
+      </div>
+    </div>
+    <div class="textarea-cont">
+      <label for="mes">Message<span class="req-sign">*</span></label>
+      <textarea id="mes" formControlName="message" rows="12">
+  </textarea>
+    </div>
+    <button class="send-btn" (click)="send()">Send</button>
+  </form>
 </section>
