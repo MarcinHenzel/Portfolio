@@ -47,8 +47,7 @@ span {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 100%;
-  display: grid;
-  place-items: center;
+  @include flex-center-cont;
   cursor: pointer;
   position: absolute;
   left: 50%;

@@ -25,6 +25,7 @@ export class MailSenderComponent implements OnInit {
     message: this.sendMailForm.get('message').value,
     mail: this.sendMailForm.get('mail').value};
     console.log(body);
+    console.log(this.sendMailForm.valid);
     this.sendGrid.sendMail(body).subscribe(mes => console.log(mes));
   }
 }

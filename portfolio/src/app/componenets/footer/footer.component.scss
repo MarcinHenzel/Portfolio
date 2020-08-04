@@ -1,11 +1,58 @@
 @import '../../../styles.scss';
 
 :host {
-  display: block;
-/*   background-color:$grey; */
-/*   background-color: $secondary; */
-  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width:100vw;
   margin-top: 10px;
-  border-top: 1px solid $grey;
-  background-color: $grey;
+  border-top:  1px solid $text;
+  padding: 1rem 0;
+}
+.icon-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .2rem .5rem;
+  position: relative;
+}
+.icon-info {
+  color: $text;
+  word-wrap: normal;
+  display: block;;
+}
+a {
+
+}
+fa-icon {
+  font-size: 2rem;
+  text-decoration: none;
+  color: $text;
+  transition: color .3s;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+
+}
+.copiedInfo {
+  transition: all .3s;
+  /*   z-index: 5; */
+z-index: -5;
+opacity: 0;
+transform: scale(0);
+  position: relative;
+  color: $strong-text;
+  padding: .3rem 1rem;
+  position: absolute;
+  display: block;
+  word-break: keep-all;
+  top: 0px;
+  background: $project-bg;
+  border-radius: 6px;
+}
+.copiedInfo.active {
+z-index: 2;
+  opacity: 1;
+  transform: scale(1) translate(-50%, 0);
 }

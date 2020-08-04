@@ -1,6 +1,7 @@
 @import 'src/styles.scss';
 :host {
   display: block;
+  max-width: 1440px;
   width: 100%;
 }
 section {

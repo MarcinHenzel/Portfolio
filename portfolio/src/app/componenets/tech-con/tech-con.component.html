@@ -3,7 +3,7 @@
 <div class="layout">
   <div class="tile-cont">
     <div *ngFor="let pics of pictures" class="tile">
-      <img appLazyLoad class="tech-pics" [alt]="pics.alt" [src]="pics.src"  width="60">
+      <img appLazyLoad class="tech-pics" [alt]="pics.alt" [src]="pics.src" >
       <span>{{pics.alt}}</span>
     </div>
   </div>
