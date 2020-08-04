@@ -5,6 +5,9 @@
     "redirectGit": "https://github.com/MarcinHenzel/ITFS",
     "description": [
       {
+        "preBold": "Information Technology Functional Systems"
+      },
+      {
         "sentence": "Project presents my frontend contribution which was used in group Engineering Thesis."
       },
       {
@@ -49,7 +52,7 @@
         "sentence": "Application helps to manage with huge data in strategic game called \"Plemiona\"."
       },
       {
-        "sentence": "tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid inserted sleep hours.",
+        "sentence": "tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid inserted sleep hours. Uses web worker due to heave algorithm.",
         "preBold": "Best attack plan - "
       },
       {
@@ -74,6 +77,49 @@
       "Web Worker",
       "MomentJS",
       "Firebase Hosting",
+      "SASS"
+    ],
+    "images": [
+      {
+        "alt": "Assign orders",
+        "src": "assets/screenshots/counter&Orders.png"
+      },
+      {
+        "alt": "Best plan",
+        "src": "assets/images/ti&tw.png"
+      },
+      {
+        "alt": "Repetition counter",
+        "src": "assets/screenshots/bestAttackPlanAndNobles.png"
+      }
+    ]
+  },
+  {
+    "title": "About this page",
+    "redirectLive": "https://frontvision.co",
+    "redirectGit": "https://https://github.com/MarcinHenzel/Portfolio",
+    "description": [
+      {
+        "sentence": "to create new projects or technologies all what is needed is to add new json object in assets folder.",
+        "preBold": "Data driven components - "
+      },
+      {
+        "sentence": "build-in message sender created with SendGrid API and Firebase functions.",
+        "preBold": "Contact section - "
+      },
+      {
+        "sentence": "used to achive optimized lazy loading of some images and to implement features based on screen position.",
+        "preBold": "Intersection Observer  - "
+      }
+    ],
+    "techs": [
+      "Angular 9",
+      "SendGrid",
+      "RWD",
+      "FontAwesome",
+      "Angular Materials",
+      "Firebase Hosting",
+      "Firebase Functions",
       "SASS"
     ],
     "images": [
