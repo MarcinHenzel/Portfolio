@@ -24,6 +24,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ProjectComponent } from './components/projects/project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MatButtonModule} from '@angular/material/button';
+import { SlideInScrollDirective } from './directives/slide-in-scroll.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import {MatButtonModule} from '@angular/material/button';
     WelcomeImageComponent,
     ImageCarouselComponent,
     ProjectComponent,
+    SlideInScrollDirective,
   ],
   imports: [
     BrowserModule,

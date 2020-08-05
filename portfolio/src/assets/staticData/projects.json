@@ -112,7 +112,7 @@
         "preBold": "Intersection Observer  - "
       },
       {
-        "sentence": "easy to modify styles in theme switcher service which saves state in local storage",
+        "sentence": "easy to modify styles with theme switcher service which saves state in local storage",
         "preBold": "Dark mode - "
       }
     ],
