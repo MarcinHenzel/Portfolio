@@ -9,7 +9,6 @@
   position: relative;
 }
 
-
 .img-carousel {
   height: 700px;
   object-fit: none;
@@ -34,17 +33,11 @@
 }
 
 .redirect-btn {
-/*   width: 3rem;
-  height: 2rem;
-  border: 1px solid $primary;
-  border-radius: 5px; */
-  /* width:400px; */
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid $primary;
   border-radius: 5px;
-  height: 1em;
   width: 120px;
   letter-spacing: 1px;
   font-size: 1.5rem;
@@ -52,8 +45,9 @@
   color: $text;
   margin: 5px;
   text-decoration: none;
-  padding: 1rem;
-  box-shadow: 1px 1px 5px 1px rgba(0,0,0,.2);
+  padding: .5rem 1rem;
+  background-color: $navbar-bg;
+  @include bot-right-shadow;
   margin: 1rem;
   transition: color .3s;
   &:hover {

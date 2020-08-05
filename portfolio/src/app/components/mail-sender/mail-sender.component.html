@@ -1,6 +1,6 @@
 <section>
-  <header>Contact Me</header>
-  <form class="contact" [formGroup]='sendMailForm'>
+  <header id="contact-anchor">Contact Me</header>
+  <form class="contact" [formGroup]='sendMailForm' (ngSubmit)="send()">
     <div class="flex-layout">
       <div class="input-cont">
         <label for="name">Name<span class="req-sign">*</span></label>
@@ -20,6 +20,6 @@
       <textarea id="mes" formControlName="message" rows="12">
   </textarea>
     </div>
-    <button class="send-btn" (click)="send()">Send</button>
+    <button mat-button type="submit" class="send-btn" >Send</button>
   </form>
 </section>

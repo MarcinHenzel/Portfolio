@@ -8,13 +8,13 @@
         "preBold": "Information Technology Functional Systems"
       },
       {
-        "sentence": "Project presents my frontend contribution which was used in group Engineering Thesis."
+        "sentence": "Project presents my frontend contribution which was used in group Engineering Thesis"
       },
       {
-        "sentence": "Backend via Firebase functions was added to present working REST."
+        "sentence": "Backend via Firebase functions was added to present working REST"
       },
       {
-        "sentence": "Application is ment to be used by administrators to track and add data to sections like transport or office with the possibility of sending alerts to mailboxes."
+        "sentence": "Application is ment to be used by administrators to track and add data to sections like transport or office with the possibility of sending alerts to mailboxes"
       }
     ],
     "techs": [
@@ -49,26 +49,26 @@
     "redirectGit": "https://github.com/MarcinHenzel/Tribal-Manager-Angular",
     "description": [
       {
-        "sentence": "Application helps to manage with huge data in strategic game called \"Plemiona\"."
+        "sentence": "Application helps to manage a big data in strategic game called \"Plemiona\""
       },
       {
-        "sentence": "tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid inserted sleep hours. Uses web worker due to heave algorithm.",
+        "sentence": "tool to build attack plan for certain hour based on village positions and given targets. Program also tries to avoid inserted sleep hours. Uses web worker due to heave algorithm",
         "preBold": "Best attack plan - "
       },
       {
-        "sentence": "tools for leaders to transcribe orders based on resources and planned targets.",
+        "sentence": "tools for leaders to transcribe orders based on resources and planned targets",
         "preBold": "Assign orders  - "
       },
       {
-        "sentence": "calculates conquer potential of players in certain area.",
+        "sentence": "calculates conquer potential of players in certain area",
         "preBold": "Nobles in range  - "
       },
       {
-        "sentence": "counts all repeating sources from multiple SOS raports. To import data select all .txt files at once.",
+        "sentence": "counts all repeating sources from multiple SOS raports. To import data select all .txt files at once",
         "preBold": "Repetition counter  - "
       },
       {
-        "sentence": "Due to requiment of having specific data to make the calculations. You can find some examples that might be copied in /src/assets."
+        "sentence": "Due to requiment of having specific data to make the calculations. You can find some examples that might be copied in /src/assets"
       }
     ],
     "techs": [
@@ -100,16 +100,20 @@
     "redirectGit": "https://https://github.com/MarcinHenzel/Portfolio",
     "description": [
       {
-        "sentence": "to create new projects or technologies all what is needed is to add new json object in assets folder.",
+        "sentence": "to create new projects or technologies all what is needed is to add new json object in assets folder",
         "preBold": "Data driven components - "
       },
       {
-        "sentence": "build-in message sender created with SendGrid API and Firebase functions.",
+        "sentence": "build-in message sender created with SendGrid API and Firebase functions",
         "preBold": "Contact section - "
       },
       {
-        "sentence": "used to achive optimized lazy loading of some images and to implement features based on screen position.",
+        "sentence": "used to achive optimized lazy loading of some images and to implement features based on screen position",
         "preBold": "Intersection Observer  - "
+      },
+      {
+        "sentence": "easy to modify styles in theme switcher service which saves state in local storage",
+        "preBold": "Dark mode - "
       }
     ],
     "techs": [
@@ -125,15 +129,11 @@
     "images": [
       {
         "alt": "Assign orders",
-        "src": "assets/screenshots/counter&Orders.png"
+        "src": "assets/images/portfolioPages.png"
       },
       {
         "alt": "Best plan",
-        "src": "assets/images/ti&tw.png"
-      },
-      {
-        "alt": "Repetition counter",
-        "src": "assets/screenshots/bestAttackPlanAndNobles.png"
+        "src": "assets/images/portfolioPhones.png"
       }
     ]
   }

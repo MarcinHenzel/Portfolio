@@ -1,9 +1,9 @@
 <div ><a class="logo"href='#Welcome'>Marcin Henzel</a></div>
 <div class="container">
   <nav>
-    <a [ngClass]="{'active': currPosition === 'Projects'}" href="#Projects" class="tab">Projects</a>
-    <a [ngClass]="{'active': currPosition === 'Technologies'}" href="#Skills" class="tab">Skills</a>
-    <a [ngClass]="{'active': currPosition === 'Contact'}" href="#Contact" class="tab">Contact</a>
+    <a href="#projects-anchor" class="tab">Projects</a>
+    <a href="#skills-anchor" class="tab">Skills</a>
+    <a href="#contact-anchor" class="tab">Contact</a>
   </nav>
   <mat-slide-toggle class="bigToggle" [ngClass]="{'sun': !isDarkMode, 'moon': isDarkMode}"  [checked]='isDarkMode'(change)="toggle($event)"></mat-slide-toggle>
 </div>

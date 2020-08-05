@@ -10,10 +10,10 @@ import { imgObj } from 'src/app/shared/models/imgObj';
 export class ImageCarouselComponent implements OnInit {
   @Input() project: projectCaruData;
   @ViewChild('img') imgRef: ElementRef;
-  actualImage ;
+  actualImage;
   counter = 0;
   intervalRef;
-  constructor( private rend: Renderer2) { }
+  constructor(private rend: Renderer2) { }
 
   ngOnInit(): void {
     this.actualImage = this.project.images[0].src;
@@ -21,7 +21,7 @@ export class ImageCarouselComponent implements OnInit {
   }
 
   interval = () => {
-    this.counter = ++this.counter % 3;
+    this.counter = ++this.counter % this.project.images.length;
     this.changeImage(this.counter);
   };
   manualChange(str) {
@@ -31,7 +31,7 @@ export class ImageCarouselComponent implements OnInit {
   changeImage(index) {
     this.rend.setStyle(this.imgRef.nativeElement, 'opacity', '0');
     setTimeout(() => {
-      this.actualImage =  this.project.images[index].src;
+      this.actualImage = this.project.images[index].src;
       clearInterval(this.intervalRef);
       this.intervalRef = setInterval(this.interval, 3000);
       this.rend.setStyle(this.imgRef.nativeElement, 'opacity', '1');

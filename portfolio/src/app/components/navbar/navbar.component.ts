@@ -1,5 +1,5 @@
 import { ThemeSwitcherService } from './../../shared/theme-switcher.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,31 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  currPosition = 'false';
   isDarkMode: boolean;
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const hash = '#' + entry.target.id + '-anchor';
+      const navEl = document.querySelector(`a[href="${hash}"]`);
+      if (entry.isIntersecting) {
+        navEl.classList.add('active');
+      } else {
+        navEl.classList.remove('active');
+      }
+    })
+  }, {rootMargin: '-40% 0px -55% 0px'});
 
-observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const hash = '#' + entry.target.id;
-    const navEl = document.querySelector(`a[href="${hash}"]`);
-    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-      navEl.classList.add('active');
-    } else {
-      navEl.classList.remove('active');
-    }
-  })
-}, { threshold: 0.5 });
-constructor(private themeSwitcher: ThemeSwitcherService) { }
 
-ngOnInit(): void {
-  this.themeSwitcher.isDark.subscribe(val => this.isDarkMode = val);
-  document.querySelectorAll('.inter-obser-tag').forEach(section => {
-    this.observer.observe(section);
-  })
-}
-toggle(event) {
-  event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
-}
+  constructor(private themeSwitcher: ThemeSwitcherService) { }
+
+  ngOnInit(): void {
+    this.themeSwitcher.isDark.subscribe(val => this.isDarkMode = val);
+    document.querySelectorAll('.inter-obser-tag').forEach(section => {
+      this.observer.observe(section);
+    })
+  }
+  toggle(event) {
+    event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
+  }
 
 }
 /* <main>

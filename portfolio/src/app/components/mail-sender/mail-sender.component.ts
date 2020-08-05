@@ -9,8 +9,9 @@ import { ThemeSwitcherService } from 'src/app/shared/theme-switcher.service';
   styleUrls: ['./mail-sender.component.scss']
 })
 export class MailSenderComponent implements OnInit {
-
+  antiSpamCounter = 0;
   constructor(private sendGrid: SendGridService, private fb: FormBuilder) { }
+
   sendMailForm: FormGroup = this.fb.group({
     phone: [''],
     name: ['', Validators.required],
@@ -20,6 +21,7 @@ export class MailSenderComponent implements OnInit {
   ngOnInit(): void {
   }
   send() {
+    if (this.antiSpamCounter++ >= 3) return;
     const body = {phone: this.sendMailForm.get('phone').value,
     name: this.sendMailForm.get('name').value,
     message: this.sendMailForm.get('message').value,

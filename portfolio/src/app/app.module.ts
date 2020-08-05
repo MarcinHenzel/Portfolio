@@ -23,6 +23,7 @@ import { ImageCarouselComponent } from './components/image-carousel/image-carous
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ProjectComponent } from './components/projects/project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatTabsModule,
     MatSlideToggleModule,
     MatButtonToggleModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
