@@ -1,4 +1,4 @@
-  <img #img [src]="actualImage" class="img-carousel">
+  <img *ngFor="let image of imgArr" #img [src]="image.src" class="img-carousel">
   <div class="btn-cont">
     <mat-button-toggle-group (ngModelChange)="manualChange($event)" [ngModel]='counter'>
       <mat-button-toggle *ngFor="let btn of project.images; let i = index" [ngClass]="{'active' : counter == i}"

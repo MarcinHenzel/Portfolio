@@ -15,14 +15,21 @@
   align-items: center;
   margin: .2rem .5rem;
   position: relative;
+  text-decoration: none;
+   &:hover fa-icon {
+    color: $primary;
+  }
 }
 .icon-info {
   color: $text;
   word-wrap: normal;
-  display: block;;
+  display: block;
 }
-a {
-
+.icon-info--mail {
+  color: $text;
+  word-wrap: normal;
+  display: block;
+  cursor: pointer;
 }
 fa-icon {
   font-size: 2rem;
@@ -30,10 +37,6 @@ fa-icon {
   color: $text;
   transition: color .3s;
   cursor: pointer;
-  &:hover {
-    color: $primary;
-  }
-
 }
 .copiedInfo {
   transition: all .3s;

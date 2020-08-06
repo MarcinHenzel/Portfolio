@@ -1,25 +1,37 @@
 import { projectCaruData } from './../../shared/models/projectImgs';
-import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { imgObj } from 'src/app/shared/models/imgObj';
+import { Component, OnInit, Input, ElementRef, Renderer2, ViewChildren, AfterViewInit, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-image-carousel',
   templateUrl: './image-carousel.component.html',
   styleUrls: ['./image-carousel.component.scss']
 })
-export class ImageCarouselComponent implements OnInit {
+export class ImageCarouselComponent implements OnInit, AfterViewInit {
   @Input() project: projectCaruData;
-  @ViewChild('img') imgRef: ElementRef;
+  @ViewChildren('img') imgRefs: QueryList<any>;
+  imgRefsArr;
+  imgArr = [];
   actualImage;
   counter = 0;
   intervalRef;
-  constructor(private rend: Renderer2) { }
-
-  ngOnInit(): void {
-    this.actualImage = this.project.images[0].src;
-    this.intervalRef = setInterval(this.interval, 3000);
+  constructor(private rend: Renderer2) {
   }
 
+  ngOnInit(): void {
+    this.project.images.forEach(image => {
+      this.imgArr.push(image);
+    });
+    this.actualImage = this.project.images[0].src;
+    this.intervalRef = setInterval(this.interval, 3000);
+
+  }
+  ngAfterViewInit(): void {
+    this.imgRefsArr = this.imgRefs.toArray();
+    this.imgRefsArr.forEach((el: ElementRef) => {
+      this.rend.setStyle(el.nativeElement, 'opacity', 0);
+    })
+    this.changeImage(0);
+  }
   interval = () => {
     this.counter = ++this.counter % this.project.images.length;
     this.changeImage(this.counter);
@@ -29,12 +41,9 @@ export class ImageCarouselComponent implements OnInit {
     this.changeImage(this.counter);
   }
   changeImage(index) {
-    this.rend.setStyle(this.imgRef.nativeElement, 'opacity', '0');
-    setTimeout(() => {
-      this.actualImage = this.project.images[index].src;
-      clearInterval(this.intervalRef);
-      this.intervalRef = setInterval(this.interval, 3000);
-      this.rend.setStyle(this.imgRef.nativeElement, 'opacity', '1');
-    }, 250);
+    this.imgRefsArr.forEach((image: ElementRef, i) => {
+      const opacityValue = (index === i) ? 1 : 0;
+      this.rend.setStyle(image.nativeElement, 'opacity', opacityValue);
+    });
   }
 }

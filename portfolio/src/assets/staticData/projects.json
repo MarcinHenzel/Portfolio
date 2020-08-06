@@ -68,7 +68,7 @@
         "preBold": "Repetition counter  - "
       },
       {
-        "sentence": "Due to requiment of having specific data to make the calculations. You can find some examples that might be copied in /src/assets"
+        "sentence": "Due to requirment of having specific data to make the calculations. You can find some examples that might be copied in /src/assets"
       }
     ],
     "techs": [
@@ -97,7 +97,7 @@
   {
     "title": "About this page",
     "redirectLive": "https://frontvision.co",
-    "redirectGit": "https://https://github.com/MarcinHenzel/Portfolio",
+    "redirectGit": "https://github.com/MarcinHenzel/Portfolio",
     "description": [
       {
         "sentence": "to create new projects or technologies all what is needed is to add new json object in assets folder",

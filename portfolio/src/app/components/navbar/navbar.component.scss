@@ -48,6 +48,9 @@ nav {
   color: $text;
   font-weight: 500;
   user-select: none;
+  &:hover {
+    color: $primary;
+  }
 }
 
 :host ::ng-deep {

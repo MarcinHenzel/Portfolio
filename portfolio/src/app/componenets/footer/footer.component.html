@@ -1,23 +1,17 @@
-<div class="icon-cont">
+<div class="icon-cont" (click)="copy()">
   <div class="copiedInfo" [ngClass]="{active: isCopyInfoVisible}">Copied</div>
-  <fa-icon [icon]="faEnvelope" (click)="copy()"></fa-icon>
-  <span  class="icon-info">{{mail}}</span>
+  <fa-icon [icon]="faEnvelope" ></fa-icon>
+  <span class="icon-info--mail">{{mail}}</span>
 </div>
-<div class="icon-cont">
-  <a href="https://github.com/MarcinHenzel" target="_blank">
-    <fa-icon [icon]="faGithub"></fa-icon>
-  </a>
+<a href="https://github.com/MarcinHenzel" target="_blank" class="icon-cont">
+  <fa-icon [icon]="faGithub"></fa-icon>
   <span class="icon-info">GitHub</span>
-</div>
-<div class="icon-cont">
-  <a href="assets/files/CvEngMarcinHenzel.pdf" download="MarcinHenzelCVPolish" target="_blank">
-    <fa-icon [icon]="faFilePdf"></fa-icon>
-  </a>
-  <span class="icon-info">CV Eng</span>
-</div>
-<div class="icon-cont">
-  <a href="assets/files/CvEngMarcinHenzel.pdf" download="MarcinHenzelCVEnglish" target="_blank">
-    <fa-icon [icon]="faFilePdf"></fa-icon>
-  </a>
-  <span class="icon-info">CV Pl</span>
-</div>
+</a>
+<a href="assets/files/CvEngMarcinHenzel.pdf" download="MarcinHenzelCVEnglish" target="_blank" class="icon-cont">
+  <fa-icon [icon]="faFilePdf"></fa-icon>
+  <span class="icon-info">CV ENG</span>
+</a>
+<a href="assets/files/CvPLMarcinHenzel.pdf" download="MarcinHenzelCVPolish" target="_blank" class="icon-cont">
+  <fa-icon [icon]="faFilePdf"></fa-icon>
+  <span class="icon-info">CV PL</span>
+</a>
