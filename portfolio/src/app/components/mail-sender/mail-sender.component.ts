@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SendGridService } from 'src/app/shared/services/send-grid.service';
-import { ThemeSwitcherService } from 'src/app/shared/theme-switcher.service';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-mail-sender',
@@ -10,13 +10,15 @@ import { ThemeSwitcherService } from 'src/app/shared/theme-switcher.service';
 })
 export class MailSenderComponent implements OnInit {
   antiSpamCounter = 0;
+  faCheck = faCheck;
+  isCheckedVis = false;
   constructor(private sendGrid: SendGridService, private fb: FormBuilder) { }
 
   sendMailForm: FormGroup = this.fb.group({
     phone: [''],
     name: ['', Validators.required],
     message: ['', Validators.required],
-    mail: ['', Validators.email],
+    mail: ['', [Validators.required, Validators.email]],
   })
   ngOnInit(): void {
   }
@@ -26,8 +28,11 @@ export class MailSenderComponent implements OnInit {
     name: this.sendMailForm.get('name').value,
     message: this.sendMailForm.get('message').value,
     mail: this.sendMailForm.get('mail').value};
-    console.log(body);
-    console.log(this.sendMailForm.valid);
     this.sendGrid.sendMail(body).subscribe(mes => console.log(mes));
+    this.showCheck();
+  }
+  showCheck() {
+    this.isCheckedVis = true;
+    setTimeout(() => this.isCheckedVis = false, 5000);
   }
 }

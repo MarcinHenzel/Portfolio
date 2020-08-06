@@ -17,7 +17,7 @@ h2 {
   letter-spacing: 2px;
   font-size: 2rem;
   font-weight: 500;
-  margin: 1rem 0 .4rem 1.4rem ;
+  margin: 1rem auto .4rem auto ;
 }
 
 .container,
@@ -35,13 +35,8 @@ h2 {
 
 .tech-cont {
   margin: 0;
+  padding: 0;
 }
-
-/* mat-tab-group {
-  width: 50%;
-  border-right: 1px solid $primary;
-} */
-
 
 .techs {
   color: $text;

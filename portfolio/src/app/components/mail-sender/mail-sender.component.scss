@@ -39,6 +39,7 @@ header {
   flex-direction: column;
   margin: .5rem 0;
 }
+
 input,
 textarea,
 .send-btn {
@@ -51,6 +52,10 @@ textarea,
   outline: none;
   padding: .5rem;
   @include bot-right-shadow;
+}
+
+.input-invalid {
+  border-color: $primary;
 }
 
 label {
@@ -71,6 +76,53 @@ textarea {
   min-height: 200px;
 }
 
+.send-btn {
+  cursor: pointer;
+  color: $strong-text;
+  transition: transform .3s;
+  width: 200px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  position: relative;
+
+  fa-icon {
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    top: .3rem;
+    right: 1.25rem;
+    color: rgb(36, 189, 61);
+    transition: opacity 1s;
+  }
+
+  .checked {
+    opacity: 1 !important;
+  }
+
+  &:not([disabled]):hover {
+    color: $primary;
+  }
+
+  &:active {
+    transform: scale(0.9)
+  }
+
+}
+
+.req-sign {
+  color: $primary;
+}
+
+// deny autofill styles
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px $project-bg inset !important;
+  -webkit-box-shadow: 0 0 0 1000px $project-bg inset !important;
+  /*use inset box-shadow to cover background-color*/
+  -text-fill-color: $text !important;
+  -webkit-text-fill-color: $text !important;
+  /*use text fill color to cover font color*/
+}
+
 @media (max-width: 500px) {
   .flex-layout {
     flex-direction: column;
@@ -80,18 +132,4 @@ textarea {
   .input-cont {
     width: 100%;
   }
-}
-.send-btn {
-  cursor: pointer;
-  color: $strong-text;
-  transition: color .3s;
-  width: 150px;
-  font-size: 2rem;
-  letter-spacing: 2px;
-  &:hover {
-    color: $primary;
-  }
-}
-.req-sign {
-  color: $primary;
 }

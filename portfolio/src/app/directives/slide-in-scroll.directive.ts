@@ -16,7 +16,7 @@ export class SlideInScrollDirective implements AfterViewInit, OnInit {
   ngAfterViewInit(): void {
     this.rend.setStyle(this.elRef.nativeElement, 'transform', `translateY(${this.translate}%)`);
     this.rend.setStyle(this.elRef.nativeElement, 'opacity', '0');
-    this.rend.setStyle(this.elRef.nativeElement, 'transition', 'all 0.7s');
+    this.rend.setStyle(this.elRef.nativeElement, 'transition', 'transform 0.7s, opacity 0.7s');
 
     const obs = new IntersectionObserver(entries => {
       entries.forEach(({ isIntersecting }) => {
