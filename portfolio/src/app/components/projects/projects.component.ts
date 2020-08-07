@@ -9,7 +9,6 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
   projects = projects;
   ngOnInit(): void {
-    console.log(this.projects);
   }
 
 }

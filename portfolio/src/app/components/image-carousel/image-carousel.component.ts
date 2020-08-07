@@ -39,6 +39,8 @@ export class ImageCarouselComponent implements OnInit, AfterViewInit {
   manualChange(str) {
     this.counter = parseInt(str, 10);
     this.changeImage(this.counter);
+    clearInterval(this.intervalRef);
+    this.intervalRef = setInterval(this.interval, 3000);
   }
   changeImage(index) {
     this.imgRefsArr.forEach((image: ElementRef, i) => {

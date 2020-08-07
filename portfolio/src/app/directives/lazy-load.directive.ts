@@ -26,7 +26,7 @@ export class LazyLoadDirective implements AfterViewInit {
           obs.unobserve(this.elRef.nativeElement);
         }
       });
-    }, {rootMargin: '30%'})
+    }, {rootMargin: '50%'})
     obs.observe(this.elRef.nativeElement);
   }
 }
