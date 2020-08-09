@@ -25,6 +25,13 @@ export class MailSenderComponent implements OnInit {
   ngOnInit(): void {
   }
   send() {
+    // markAll doesnt work...
+    for (const i in this.sendMailForm.controls) {
+      if (Object.prototype.hasOwnProperty.call(this.sendMailForm.controls, i)) {
+        this.sendMailForm.controls[i].markAsDirty();
+      }
+    }
+    if (this.sendMailForm.valid === false) return;
     if (this.antiSpamCounter++ >= this.possibleSends) return;
     const body: SendMailBody = {
       phone: this.sendMailForm.get('phone').value,

@@ -15,10 +15,8 @@ APP.use(express.json());
 
 
 APP.post('/api/sendMail', (req, res) => {
-    console.log('weszoo');
     const msg = {
         to: `${MY_MAIL}`,
-        /* from: `${req.body.mail}`, */
         from: 'lokomolo1@gmail.com',
         subject: 'From frontvision.co interested message',
         text: 'text',
@@ -31,33 +29,14 @@ APP.post('/api/sendMail', (req, res) => {
         }
     };
     sgMail.send(msg)
-        .then(() => { 
-            console.log('weszoo2');
-            res.status(200).send() 
+        .then(() => {
+            res.status(200).send()
         }, error => {
-            console.log('weszoo3');
-
-            console.error(error);
             res.status(500).send(error)
             if (error.response) {
                 console.error(error.response.body)
             }
         });
-    /*  (async () => {
-         console.log('weszoo2');
- 
-         try {
-             console.log('weszoo3');
-             await sgMail.send(msg);
-             res.status(200).send(res)
-         } catch (error) {
-             console.error(error);
-             res.status(200).send({ error, response: res })
-             if (error.response) {
-                 console.error(error.response.body);
-             }
-         }
-     }); */
 })
 
 export const sendGriD = functions.https.onRequest(APP)

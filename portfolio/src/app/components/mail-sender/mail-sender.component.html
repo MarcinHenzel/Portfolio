@@ -23,7 +23,7 @@
         [ngClass]="{'input-invalid': !sendMailForm.get('message').valid && sendMailForm.get('message').dirty}">
   </textarea>
     </div>
-    <button mat-button type="submit" class="send-btn" [disabled]="!sendMailForm.valid">Send <fa-icon [ngClass]="{'checked' : isCheckedVis}"
+    <button mat-button type="submit" class="send-btn" >Send <fa-icon [ngClass]="{'checked' : isCheckedVis}"
         [icon]="faCheck"></fa-icon> </button>
   </form>
 </section>
