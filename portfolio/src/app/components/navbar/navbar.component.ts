@@ -1,5 +1,6 @@
 import { ThemeSwitcherService } from './../../shared/theme-switcher.service';
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   isDarkMode: boolean;
+  subscription: Subscription;
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const hash = '#' + entry.target.id + '-anchor';
@@ -20,12 +22,15 @@ export class NavbarComponent implements OnInit {
   constructor(private themeSwitcher: ThemeSwitcherService, private rend: Renderer2) { }
 
   ngOnInit(): void {
-    this.themeSwitcher.isDark.subscribe(val => this.isDarkMode = val);
+    this.subscription = this.themeSwitcher.isDark.subscribe(val => this.isDarkMode = val);
     document.querySelectorAll('.inter-obser-tag').forEach(section => {
       this.observer.observe(section);
     })
   }
   toggleTheme(event) {
     event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
+  }
+  ngOnDestroy():void {
+    this.subscription.unsubscribe();
   }
 }

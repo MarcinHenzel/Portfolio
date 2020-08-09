@@ -26,7 +26,6 @@ export class ImageCarouselComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.imgRefsArr = this.imgRefs.toArray();
-    console.log(this.imgRefsArr);
     this.imgRefsArr.forEach((el: ElementRef) => {
       this.rend.setStyle(el.nativeElement, 'opacity', 0);
     })

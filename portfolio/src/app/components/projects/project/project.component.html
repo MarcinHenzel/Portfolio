@@ -1,7 +1,7 @@
 <section>
   <div class="container right-border">
     <h2>{{project.title}}</h2>
-    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+    <mat-tab-group mat-align-tabs="center" dynamicHeight >
       <mat-tab label="Description">
         <p class="description-sentence" *ngFor="let sentence of project.description"><span class="bold">{{sentence?.preBold}}</span>{{sentence.sentence}}
         </p>

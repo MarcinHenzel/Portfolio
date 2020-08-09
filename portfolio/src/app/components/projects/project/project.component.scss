@@ -1,9 +1,11 @@
 @import 'src/styles.scss';
+
 :host {
   display: block;
   max-width: 1440px;
   width: 100%;
 }
+
 section {
   display: flex;
   background: $project-bg;
@@ -17,7 +19,7 @@ h2 {
   letter-spacing: 2px;
   font-size: 2rem;
   font-weight: 500;
-  margin: 1rem auto .4rem auto ;
+  margin: 1rem auto .4rem auto;
 }
 
 .container,
@@ -26,9 +28,11 @@ h2 {
   flex-direction: column;
   width: 50%;
 }
+
 .container {
   padding: 10px 0px 5px 10px;
 }
+
 .right-border {
   border-right: 1px solid $primary;
 }
@@ -56,31 +60,23 @@ h2 {
   line-height: 2rem;
   font-size: 1.2rem;
 }
+
 .bold {
   color: $strong-text;
   font-weight: 500;
 }
+
 :host ::ng-deep {
-  .mat-tab-label-content {
-    color: $strong-text;
-  }
-   mat-ink-bar {
-    background-color: $primary !important;
-  }
 
   .mat-tab-body-content {
     min-height: 250px !important;
-    color: $text;
   }
 
   mat-tab-body {
+    overflow-y: hidden !important;
     padding: 1rem 1rem 0 1rem !important;
   }
 
-  mat-tab-body,
-  .mat-tab-body-content {
-    overflow-y: hidden !important;
-  }
 }
 
 @media (max-width: 776px) {

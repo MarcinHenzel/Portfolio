@@ -5,5 +5,5 @@
     <a href="#skills-anchor" class="tab">Skills</a>
     <a href="#contact-anchor" class="tab">Contact</a>
   </nav>
-  <mat-slide-toggle class="bigToggle" [ngClass]="{'sun': !isDarkMode, 'moon': isDarkMode}"  [checked]='isDarkMode'(change)="toggleTheme($event)"></mat-slide-toggle>
+  <mat-slide-toggle color="primary" class="bigToggle" [ngClass]="{'sun': !isDarkMode, 'moon': isDarkMode}"  [checked]='isDarkMode'(change)="toggleTheme($event)"></mat-slide-toggle>
 </div>

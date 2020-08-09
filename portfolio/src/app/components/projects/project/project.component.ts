@@ -8,8 +8,6 @@ import { Component, OnInit, Input} from '@angular/core';
 export class ProjectComponent implements OnInit {
   @Input() project;
   constructor() { }
-
   ngOnInit(): void {
   }
-
 }
