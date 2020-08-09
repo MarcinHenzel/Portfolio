@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import 'src/styles.scss';
 
 :host {
   width: 100vw;
@@ -10,6 +10,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+
 .blur-container {
   display: flex;
   flex-direction: column;
@@ -22,6 +23,7 @@
   padding: 3rem;
   position: relative;
 }
+
 header {
   margin: 1rem 0 1.8rem 0;
   font-weight: 500;
@@ -30,20 +32,24 @@ header {
   letter-spacing: 2px;
   line-height: 3rem;
 }
+
 span {
   letter-spacing: 1px;
   color: $white;
   line-height: 2rem;
 }
+
 .hello {
   font-size: 2rem;
 }
+
 .message {
   font-size: 1.3rem;
 }
+
 .scroll-btn {
   all: unset;
-  background-color: rgb(20,20,20);
+  background-color: rgb(20, 20, 20);
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 100%;
@@ -52,24 +58,48 @@ span {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5rem;
+  bottom: 6rem;
   box-shadow: 0 0 0 0 $primary;
   -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 
-  &:hover{
-    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+  &:hover {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
   }
+
   fa-icon.arrow {
     color: $primary;
     font-size: 3.5rem;
   }
 }
+
 .scroll-btn {
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);}}
-@keyframes pulse {to {box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);}}
+  @-webkit-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);
+    }
+  }
+
+  @-moz-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);
+    }
+  }
+
+  @-ms-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);
+    }
+  }
+
+  @keyframes pulse {
+    to {
+      box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0);
+    }
+  }
 }

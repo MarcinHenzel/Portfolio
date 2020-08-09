@@ -1,4 +1,4 @@
-import { imgObj } from './imgObj';
+import { imgObj } from './ImgObj';
 
 export interface projectCaruData {
   title: string;

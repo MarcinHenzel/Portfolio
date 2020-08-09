@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { imgObj } from 'src/app/shared/models/imgObj';
+import { imgObj } from 'src/app/shared/models/ImgObj';
 import skillImages from 'src/assets/staticData/skillImages.json';
 @Component({
   selector: 'app-tech-con',

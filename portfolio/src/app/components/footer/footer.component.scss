@@ -1,4 +1,5 @@
-@import '../../../styles.scss';
+@import 'src/styles.scss';
+
 
 :host {
   display: flex;
@@ -66,4 +67,7 @@ fa-icon {
   z-index: 2;
   opacity: 1;
   transform: scale(1) translate(-50%, 0);
+}
+.tab {
+  color: red;
 }

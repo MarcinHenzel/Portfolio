@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import 'src/styles.scss';
 
 :host {
   display: flex;
@@ -90,13 +90,6 @@ nav {
 }
 .active {
   color: $primary;
-}
-#intersection {
-  width: 1px;
-  height: 1px;
-  background-color: red;
-  position: fixed;
-  top: 50vh;
 }
 
 @media (max-width: 545px) {

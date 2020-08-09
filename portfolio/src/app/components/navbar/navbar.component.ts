@@ -1,5 +1,5 @@
 import { ThemeSwitcherService } from './../../shared/theme-switcher.service';
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -12,16 +12,12 @@ export class NavbarComponent implements OnInit {
     entries.forEach(entry => {
       const hash = '#' + entry.target.id + '-anchor';
       const navEl = document.querySelector(`a[href="${hash}"]`);
-      if (entry.isIntersecting) {
-        navEl.classList.add('active');
-      } else {
-        navEl.classList.remove('active');
-      }
+      entry.isIntersecting ? this.rend.addClass(navEl, 'active') : this.rend.removeClass(navEl, 'active');
     })
-  }, {rootMargin: '-40% 0px -55% 0px'});
+  }, { rootMargin: '-40% 0px -55% 0px' });
 
 
-  constructor(private themeSwitcher: ThemeSwitcherService) { }
+  constructor(private themeSwitcher: ThemeSwitcherService, private rend: Renderer2) { }
 
   ngOnInit(): void {
     this.themeSwitcher.isDark.subscribe(val => this.isDarkMode = val);
@@ -29,14 +25,7 @@ export class NavbarComponent implements OnInit {
       this.observer.observe(section);
     })
   }
-  toggle(event) {
+  toggleTheme(event) {
     event.checked ? this.themeSwitcher.setDark() : this.themeSwitcher.setLight();
   }
-
 }
-/* <main>
-  <app-projects class="inter-obser-tag"id="Projects"></app-projects>
-  <app-tech-con class="inter-obser-tag"id="Technologies"></app-tech-con>
-  <app-mail-sender class="inter-obser-tag"id="Contact"></app-mail-sender>
-</main>
- */

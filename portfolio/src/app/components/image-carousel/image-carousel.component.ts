@@ -1,4 +1,5 @@
-import { projectCaruData } from './../../shared/models/projectImgs';
+import { imgObj } from '../../shared/models/ImgObj';
+import { projectCaruData } from '../../shared/models/ProjectImgs';
 import { Component, OnInit, Input, ElementRef, Renderer2, ViewChildren, AfterViewInit, QueryList } from '@angular/core';
 
 @Component({
@@ -10,23 +11,22 @@ export class ImageCarouselComponent implements OnInit, AfterViewInit {
   @Input() project: projectCaruData;
   @ViewChildren('img') imgRefs: QueryList<any>;
   imgRefsArr;
-  imgArr = [];
-  actualImage;
+  imgArr: imgObj[] = [];
   counter = 0;
   intervalRef;
   constructor(private rend: Renderer2) {
   }
 
   ngOnInit(): void {
-    this.project.images.forEach(image => {
+    this.project.images.forEach((image: imgObj) => {
       this.imgArr.push(image);
     });
-    this.actualImage = this.project.images[0].src;
     this.intervalRef = setInterval(this.interval, 3000);
 
   }
   ngAfterViewInit(): void {
     this.imgRefsArr = this.imgRefs.toArray();
+    console.log(this.imgRefsArr);
     this.imgRefsArr.forEach((el: ElementRef) => {
       this.rend.setStyle(el.nativeElement, 'opacity', 0);
     })

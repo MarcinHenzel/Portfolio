@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import projects from 'src/assets/staticData/projects.json';
 @Component({
   selector: 'app-projects',

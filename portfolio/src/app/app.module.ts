@@ -4,27 +4,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideNavComponent } from './componenets/side-nav/side-nav.component';
-import { MainPageComponent } from './main-page/main-page.component';
 import { LazyLoadDirective } from './directives/lazy-load.directive';
-import { TechConComponent } from './componenets/tech-con/tech-con.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './componenets/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MailSenderComponent } from './components/mail-sender/mail-sender.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { AboutmeComponent } from './componenets/aboutme/aboutme.component';
-import { WelcomeImageComponent } from './componenets/welcome-image/welcome-image.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ProjectComponent } from './components/projects/project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { SlideInScrollDirective } from './directives/slide-in-scroll.directive';
+import { WelcomeImageComponent } from './components/welcome-image/welcome-image.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { TechConComponent } from './components/tech-con/tech-con.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +35,6 @@ import { SlideInScrollDirective } from './directives/slide-in-scroll.directive';
     NavbarComponent,
     MailSenderComponent,
     ProjectsComponent,
-    AboutmeComponent,
     WelcomeImageComponent,
     ImageCarouselComponent,
     ProjectComponent,
