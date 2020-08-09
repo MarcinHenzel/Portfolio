@@ -1,4 +1,4 @@
-export interface imgObj {
+export interface ImgObj {
   alt: string;
   src: string;
 }
