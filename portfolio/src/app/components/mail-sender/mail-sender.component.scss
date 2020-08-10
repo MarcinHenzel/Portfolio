@@ -10,19 +10,11 @@ header {
   @include section-header;
 }
 
-.layout {
-  @include narrow-layout;
-  background-color: $background;
-}
-
 .contact {
   align-self: center;
-  box-sizing: border-box;
-  display: flex;
+  @include flex-center-col;
   width: 100%;
   max-width: 1200px;
-  flex-direction: column;
-  align-items: center;
   padding: 1rem;
 }
 
@@ -45,7 +37,7 @@ textarea,
 .send-btn {
   background-color: $project-bg;
   border: 1px solid $text;
-  border-radius: 8px;
+  border-radius: 10px;
   color: $text;
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -86,7 +78,7 @@ textarea {
   position: relative;
   border: 1px solid $primary;
 
-  fa-icon {
+  .fa-icon {
     display: inline-block;
     opacity: 0;
     position: absolute;
@@ -100,7 +92,7 @@ textarea {
     opacity: 1 !important;
   }
 
-  &:not([disabled]):hover {
+  &:hover {
     color: $primary;
   }
 
@@ -108,9 +100,6 @@ textarea {
     transform: scale(0.9)
   }
 
-  &[disabled] {
-    color: grey;
-  }
 }
 
 .req-sign {
@@ -121,17 +110,11 @@ textarea {
 input:-webkit-autofill {
   box-shadow: 0 0 0 1000px $project-bg inset !important;
   -webkit-box-shadow: 0 0 0 1000px $project-bg inset !important;
-  /*use inset box-shadow to cover background-color*/
   -text-fill-color: $text !important;
   -webkit-text-fill-color: $text !important;
-  /*use text fill color to cover font color*/
 }
 
 @media (max-width: 500px) {
-  .flex-layout {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
   .input-cont {
     width: 100%;

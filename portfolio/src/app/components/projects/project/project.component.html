@@ -1,16 +1,17 @@
 <section>
   <div class="container right-border">
     <h2>{{project.title}}</h2>
-    <mat-tab-group mat-align-tabs="center" dynamicHeight >
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
       <mat-tab label="Description">
-        <p class="description-sentence" *ngFor="let sentence of project.description"><span class="bold">{{sentence?.preBold}}</span>{{sentence.sentence}}
+        <p class="description-sentence" *ngFor="let sentence of project.description"><span
+            class="bold">{{sentence?.preBold}}</span>{{sentence.sentence}}
         </p>
         <div class="img-cont">
         </div>
       </mat-tab>
       <mat-tab label="Techs & libraries">
         <ul class="tech-cont">
-          <li class="techs" *ngFor="let tech of project.techs"><span>{{tech}}</span></li>
+          <li class="tech" *ngFor="let tech of project.techs"><span>{{tech}}</span></li>
         </ul>
       </mat-tab>
     </mat-tab-group>
@@ -18,5 +19,4 @@
   <div class="img-cont">
     <app-image-carousel [project]="project"></app-image-carousel>
   </div>
-
 </section>

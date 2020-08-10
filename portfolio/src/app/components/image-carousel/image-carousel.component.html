@@ -1,7 +1,7 @@
   <img *ngFor="let image of imgArr" #img [src]="image.src" class="img-carousel">
   <div class="btn-cont">
-    <mat-button-toggle-group (ngModelChange)="manualChange($event)" [ngModel]='counter'>
-      <mat-button-toggle *ngFor="let btn of project.images; let i = index" [ngClass]="{'active' : counter == i}"
+    <mat-button-toggle-group class="toggle-btn-cont" (ngModelChange)="manualChange($event)" [ngModel]='counter'>
+      <mat-button-toggle class="toggle-btn" *ngFor="let btn of project.images; let i = index" [ngClass]="{'active' : counter == i}"
         [value]="i"></mat-button-toggle>
     </mat-button-toggle-group>
     <div class="redirect-btn-cont">

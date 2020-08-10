@@ -1,6 +1,6 @@
-import { ThemeSwitcherService } from './../../shared/theme-switcher.service';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { ThemeSwitcherService } from 'src/app/shared/services/theme-switcher.service';
 
 @Component({
   selector: 'app-navbar',

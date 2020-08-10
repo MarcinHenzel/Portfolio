@@ -20,14 +20,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatButtonModule } from '@angular/material/button';
 import { SlideInScrollDirective } from './directives/slide-in-scroll.directive';
 import { WelcomeImageComponent } from './components/welcome-image/welcome-image.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { TechConComponent } from './components/tech-con/tech-con.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SideNavComponent,
     MainPageComponent,
     LazyLoadDirective,
     TechConComponent,

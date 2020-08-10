@@ -5,14 +5,17 @@ $primary: var(--primary);
 $navbar-bg: var(--navbar-bg);
 $project-bg: var(--project-bg);
 $white: rgb(235, 235, 235);
-/* $orange: #ff9f56; */
-/* $orange: rgb(40, 59, 182); */
 $grey: rgb(124, 124, 124);
 
 @mixin flex-center-cont {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@mixin flex-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @mixin section-header {
   text-align: center;
@@ -36,9 +39,7 @@ $grey: rgb(124, 124, 124);
 @mixin bot-right-shadow {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.158);
 }
-* {
-  box-sizing: border-box;
-}
+
 @mixin narrow-layout {
   display: flex;
   flex-direction: column;
@@ -47,6 +48,9 @@ $grey: rgb(124, 124, 124);
   align-self: center;
   margin-right: auto;
   margin-left: auto;
+}
+* {
+  box-sizing: border-box;
 }
 :root {
   //colors are applied from theme-switcher.service

@@ -3,7 +3,6 @@
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100vw;
   margin-top: 1rem;
 }
@@ -22,10 +21,8 @@ header {
 .tile {
   height: 120px;
   width: 120px;
-  display: flex;
-  flex-direction: column;
+  @include flex-center-col;
   justify-content: space-around;
-  align-items: center;
   margin: .4rem;
   padding: .5rem;
   background-color: $project-bg;

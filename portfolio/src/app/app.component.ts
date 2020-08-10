@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeSwitcherService } from './shared/theme-switcher.service';
 import { Subscription, BehaviorSubject } from 'rxjs';
+import { ThemeSwitcherService } from './shared/services/theme-switcher.service';
 
 @Component({
   selector: 'app-root',

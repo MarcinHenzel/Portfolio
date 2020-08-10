@@ -1,17 +1,17 @@
 <div class="icon-cont" (click)="copy()">
   <div class="copiedInfo" [ngClass]="{active: isCopyInfoVisible}">Copied</div>
-  <fa-icon [icon]="faEnvelope" ></fa-icon>
+  <fa-icon class="fa-icon" [icon]="faEnvelope" ></fa-icon>
   <span class="icon-info--mail">{{mail}}</span>
 </div>
 <a href="https://github.com/MarcinHenzel" target="_blank" class="icon-cont">
-  <fa-icon [icon]="faGithub"></fa-icon>
+  <fa-icon class="fa-icon" [icon]="faGithub"></fa-icon>
   <span class="icon-info">GitHub</span>
 </a>
 <a href="assets/files/CvEngMarcinHenzel.pdf" download="MarcinHenzelCVEnglish" target="_blank" class="icon-cont">
-  <fa-icon [icon]="faFilePdf"></fa-icon>
+  <fa-icon class="fa-icon" [icon]="faFilePdf"></fa-icon>
   <span class="icon-info">CV ENG</span>
 </a>
 <a href="assets/files/CvPLMarcinHenzel.pdf" download="MarcinHenzelCVPolish" target="_blank" class="icon-cont">
-  <fa-icon [icon]="faFilePdf"></fa-icon>
+  <fa-icon class="fa-icon" [icon]="faFilePdf"></fa-icon>
   <span class="icon-info">CV PL</span>
 </a>
